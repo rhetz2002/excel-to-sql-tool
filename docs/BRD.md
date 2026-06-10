@@ -73,11 +73,18 @@ prompt for name of file after being redirected by bash
 
 **Portability: what OS and Python version should it run on**             
 it should be able to be run on many operating systems with            
-it being writen in python as long as python is installed on the system
+it being writen in python as long as python is installed on the system.
+it will ising the most recent version of python being version 3.14.5
 
-
-
+**Constraints: free tools only, Python only, SQLite only (no external database server required)**
+it will using python a free library and programming language          
+and will only be using the comapnies internal SQL database
 
 ## SECTION 5 Out of Scope
 
 ## SECTION 6 Open Questions
+- will it be rquired to convert the sql back into an excell format?             
+
+-
+
+-
