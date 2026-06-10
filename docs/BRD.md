@@ -45,11 +45,18 @@ i Myles Tollefson am the developer
  invalid or corupt data that way i dont have to worry about        
  bad ballences geting to my desk
 
--as
+-as a database analyst i want to be able to load a excell      
+ file on damand so i can view the data in an easily       
+ readable format
 
--as
+-as bookeeper i want to be able to insert a simple file         
+ to be input into an sql database in order to       
+be stored in our SQL datbase
 
--as
+-as an operations manager i want to be able       
+ to input a single file and run a single command        
+ to convert the excell file to SQL so my staff         
+ dosnt have to do it by hand       
 
 ## SECTION 4 Non-Functional Requirements
 
