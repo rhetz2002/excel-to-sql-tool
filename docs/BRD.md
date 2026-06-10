@@ -14,7 +14,7 @@ the emplyies of the company will use this software to transfer the data
 into the SQL database. it will asumably be used quite frequent with many    
 in the company
 
-**What will success look like for the client**
+**What will success look like for the client**    
 sucsess will be the transfer of infromation from the excel file into the SQL   
 database. sucsess will also entale absolutly no errors or modification to the data     
 upon transfer of the data into the SQL database  
