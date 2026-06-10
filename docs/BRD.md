@@ -20,7 +20,7 @@ database. sucsess will also entale absolutly no errors or modification to the da
 upon transfer of the data into the SQL database  
 
 ## SECTION 2 Stakeholders  
-**Who is the client / end user**
+**Who is the client / end user**    
 the client is the hiring companie with   
 the end user bing the employies at the companie
 
