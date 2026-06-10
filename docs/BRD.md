@@ -59,19 +59,19 @@ be stored in our SQL datbase
  dosnt have to do it by hand       
 
 ## SECTION 4 Non-Functional Requirements
-**Reliability: what happens when the Excel file is missing or malformed**
+**Reliability: what happens when the Excel file is missing or malformed**               
 it should promt an error to the user and output        
 a small error file with more details if needed       
 could posilbe be configured to automaticly        
 remove older error logs
 
-**Usability: does someone need to be a Python expert to run this tool**
-no it should in best case senrio only require the            
+**Usability: does someone need to be a Python expert to run this tool**              
+no it should in best case senrio only require the             
 excel file be put in a specific folder, could                     
 have an option to be pointed into a folder or               
 prompt for name of file after being redirected by bash       
 
-**Portability: what OS and Python version should it run on**
+**Portability: what OS and Python version should it run on**             
 it should be able to be run on many operating systems with 
 it being writen in python as long as python is installed on the system
 
