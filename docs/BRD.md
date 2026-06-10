@@ -72,7 +72,7 @@ have an option to be pointed into a folder or
 prompt for name of file after being redirected by bash       
 
 **Portability: what OS and Python version should it run on**             
-it should be able to be run on many operating systems with 
+it should be able to be run on many operating systems with            
 it being writen in python as long as python is installed on the system
 
 
