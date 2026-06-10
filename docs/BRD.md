@@ -2,7 +2,8 @@
 
 ---
 
-## SECTION 1 Project Overview  
+## SECTION 1 Project Overview                   
+
 **What problem dose this tool solve**    
 this tool is designed to make the job of transfering an   
 excel file into a SQL database easy. it will be near automatic    
@@ -20,7 +21,8 @@ database. sucsess will also entale absolutly no errors from valid data or
 modification to valid data upon transfer of the data into the SQL database.    
 if invalid data is input or a unforseen error ocures it should output an error log.  
 
-## SECTION 2 Stakeholders  
+## SECTION 2 Stakeholders                    
+
 **Who is the client / end user**    
 the client is the hiring companie with   
 the end user bing the employies at the companie
@@ -58,7 +60,8 @@ be stored in our SQL datbase
  to convert the excell file to SQL so my staff         
  dosnt have to do it by hand       
 
-## SECTION 4 Non-Functional Requirements
+## SECTION 4 Non-Functional Requirements                       
+
 **Reliability: what happens when the Excel file is missing or malformed**               
 it should promt an error to the user and output        
 a small error file with more details if needed       
@@ -80,17 +83,25 @@ it will ising the most recent version of python being version 3.14.5
 it will using python a free library and programming language          
 and will only be using the comapnies internal SQL database
 
-## SECTION 5 Out of Scope
-- this tool will not be used to view sql excel data
+## SECTION 5 Out of Scope                     
+
+- this tool will not be used to view sql, excel data
 
 - this tool will not have a grafical ui and is striclty command line based
 
--
+- this tool will not it will only output data to a              
+  chosen location it will not be abel to manage output data             
 
--
-## SECTION 6 Open Questions
-- will it be rquired to convert the sql back into an excell format?
+- this tool will check for certan amount of user input error but isnt perfect,         
+  error verification can only go so far and human error can still be a factor.          
+  im sure there are ways to check that input data checks out with alredy existing         
+  data in the sql database but that is byond the scope of this tool      
 
--
+## SECTION 6 Open Questions              
 
--
+- will it be rquired to convert the sql back into an excel format?          
+<!--out of ideas lol-->           
+- would you like to controll where the output data is droped or a        
+  preechosen location? (likely a folder next to the python program)         
+<!--really out of ideas-->          
+- 
