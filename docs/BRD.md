@@ -29,8 +29,10 @@ i Myles Tollefson am the developer
 
 ## SECTION 3 Functional Requirements: User Stories 
 
-## SECTION 4
 
-## SECTION 5
 
-## SECTION 6
+## SECTION 4 Non-Functional Requirements
+
+## SECTION 5 Out of Scope
+
+## SECTION 6 Open Questions
