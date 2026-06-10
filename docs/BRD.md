@@ -32,28 +32,28 @@ i Myles Tollefson am the developer
 
 ## SECTION 3 Functional Requirements: User Stories 
 
--as a manager i was to be able to pull up an up to     
+- as a manager i was to be able to pull up an up to     
  date summery of the SQL database and see if there has      
  been any errors and how many     
 
--as an IT professional i want to be able to be called       
+- as an IT professional i want to be able to be called       
  in if there is an error and have the ability to look                
  at an output log of the error to put me on the right          
  track to solving the issue
 
--as an acountant i want the system to be able to detect      
+- as an acountant i want the system to be able to detect      
  invalid or corupt data that way i dont have to worry about        
  bad ballences geting to my desk
 
--as a database analyst i want to be able to load a excell      
+- as a database analyst i want to be able to load a excell      
  file on damand so i can view the data in an easily       
  readable format
 
--as bookeeper i want to be able to insert a simple file         
+- as bookeeper i want to be able to insert a simple file         
  to be input into an sql database in order to       
 be stored in our SQL datbase
 
--as an operations manager i want to be able       
+- as an operations manager i want to be able       
  to input a single file and run a single command        
  to convert the excell file to SQL so my staff         
  dosnt have to do it by hand       
@@ -81,9 +81,15 @@ it will using python a free library and programming language
 and will only be using the comapnies internal SQL database
 
 ## SECTION 5 Out of Scope
+- this tool will not be used to view sql excel data
 
+- this tool will not have a grafical ui and is striclty command line based
+
+-
+
+-
 ## SECTION 6 Open Questions
-- will it be rquired to convert the sql back into an excell format?             
+- will it be rquired to convert the sql back into an excell format?
 
 -
 
