@@ -16,8 +16,9 @@ in the company
 
 **What will success look like for the client**    
 sucsess will be the transfer of infromation from the excel file into the SQL   
-database. sucsess will also entale absolutly no errors or modification to the data     
-upon transfer of the data into the SQL database  
+database. sucsess will also entale absolutly no errors from valid data or     
+modification to valid data upon transfer of the data into the SQL database.    
+if invalid data is input or a unforseen error ocures it should output an error log.  
 
 ## SECTION 2 Stakeholders  
 **Who is the client / end user**    
@@ -29,7 +30,10 @@ i Myles Tollefson am the developer
 
 ## SECTION 3 Functional Requirements: User Stories 
 
+-as a manager i was to be able to pull up a summery of the sql     
+ database and see if there has been any errors     
 
+-as an IT 
 
 ## SECTION 4 Non-Functional Requirements
 
