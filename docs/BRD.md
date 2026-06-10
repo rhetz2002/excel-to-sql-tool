@@ -24,7 +24,7 @@ upon transfer of the data into the SQL database
 the client is the hiring companie with   
 the end user bing the employies at the companie
 
-**Who is the developer**
+**Who is the developer**    
 i Myles Tollefson am the developer    
 
 ## SECTION 3 Functional Requirements: User Stories 
