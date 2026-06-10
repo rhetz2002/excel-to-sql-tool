@@ -30,10 +30,22 @@ i Myles Tollefson am the developer
 
 ## SECTION 3 Functional Requirements: User Stories 
 
--as a manager i was to be able to pull up a summery of the sql     
- database and see if there has been any errors     
+-as a manager i was to be able to pull up an up to     
+ date summery of the SQL database and see if there has      
+ been any errors and how many     
 
--as an IT 
+-as an IT professional i want to be able to be called       
+ in if there is an error and have the ability to look                
+ at an output log of the error to put me on the right          
+ track to solving the issue
+
+-as 
+
+-as
+
+-as
+
+-as
 
 ## SECTION 4 Non-Functional Requirements
 
