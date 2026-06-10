@@ -39,7 +39,9 @@ i Myles Tollefson am the developer
  at an output log of the error to put me on the right          
  track to solving the issue
 
--as 
+-as an acountant i want the system to be able to detect      
+ invalid or corupt data that way i dont have to worry about        
+ bad ballences geting to my desk
 
 -as
 
