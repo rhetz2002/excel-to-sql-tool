@@ -53,31 +53,28 @@ I Myles Tollefson am the developer
   the SQL database to be stored in our SQL database without any additional hassle.                 
 
 - As an operations manager, I want to be able to input a single file and run a single                       
-  command to convert the Excell file to SQL, so my staff doesn't have to do it by hand                          
+  command to convert the Excell file to SQL, so my staff doesn't have to do it by hand.                          
 
 ## SECTION 4 Non-Functional Requirements                       
+                                              
+**Reliability: what happens when the Excel file is missing or malformed**                
+It should prompt an error to the user and output a small error log with more details              
+if needed. It should also prevent the input data from being processed further. Could               
+possibly be configured too automatically remove older error logs.                    
+                                                                       
+**Usability: does someone need to be a Python expert to run this tool**                                           
+No, it should in best case scenario only require the excel file be put in a specific folder,                   
+could have an option to be pointed into a folder, possibly could be achieved by the cd command                         
+or prompt for name of file after being redirected by cd, at most may require minimal bash knowledge.                         
 
-**Reliability: what happens when the Excel file is missing or malformed**               
-it should promt an error to the user and output        
-a small error file with more details if needed       
-could posilbe be configured to automaticly        
-remove older error logs
+**Portability: what OS and Python version should it run on**                                    
+It should be able to run on many operating systems with it being written in python as long as python                          
+is installed on the system. It will be using the most recent version of python being version 3.14.5.                         
 
-**Usability: does someone need to be a Python expert to run this tool**              
-no it should in best case senrio only require the             
-excel file be put in a specific folder, could                     
-have an option to be pointed into a folder or               
-prompt for name of file after being redirected by bash       
-
-**Portability: what OS and Python version should it run on**             
-it should be able to be run on many operating systems with            
-it being writen in python as long as python is installed on the system.
-it will ising the most recent version of python being version 3.14.5
-
-**Constraints: free tools only, Python only, SQLite only (no external database server required)**
-it will using python a free library and programming language          
-and will only be using the comapnies internal SQL database
-
+**Constraints: free tools only, Python only, SQLite only (no external database server required)**                     
+It will be using python, a free library and programming language                        
+and will only be using the companies internal SQL database.                                
+                           
 ## SECTION 5 Out of Scope                     
 
 - this tool will not be used to view sql, excel data
