@@ -2,7 +2,13 @@
 
 ---
 
-## SECTION 1 Project Overview                   
+## project     
+     
+**Excell to SQL conversion**          
+         
+---
+
+### SECTION 1 Project Overview                   
 
 **What problem dose this tool solve**         
 This tool is designed to make the job of transferring an        
@@ -23,7 +29,7 @@ data upon transfer of the data into the SQL database. If invalid
 data is input or an unforeseen error occurs, it should prompt               
 an error and output an error log instead of transferring the data.                
 
-## SECTION 2 Stakeholders                    
+### SECTION 2 Stakeholders                    
 
 **Who is the client / end user**            
 the client is the hiring company with              
@@ -34,7 +40,7 @@ I Myles Tollefson am the developer
 
 <!-- really hope this is good....-->
 
-## SECTION 3 Functional Requirements: User Stories              
+### SECTION 3 Functional Requirements: User Stories              
             
 - As a manager, I was to be able to pull up an up to date summary           
   of the SQL database and see if there have been any errors and how many.              
@@ -55,7 +61,7 @@ I Myles Tollefson am the developer
 - As an operations manager, I want to be able to input a single file and run a single                       
   command to convert the Excell file to SQL, so my staff doesn't have to do it by hand.                          
 
-## SECTION 4 Non-Functional Requirements                       
+### SECTION 4 Non-Functional Requirements                       
                                               
 **Reliability: what happens when the Excel file is missing or malformed**                
 It should prompt an error to the user and output a small error log with more details              
@@ -75,7 +81,7 @@ is installed on the system. It will be using the most recent version of python b
 It will be using python, a free library and programming language                        
 and will only be using the companies internal SQL database.                                
                            
-## SECTION 5 Out of Scope                     
+### SECTION 5 Out of Scope                     
 - This tool will not be used to view SQL, excel data.                           
                                                            
 - This tool will not have a graphical UI and is strictly command line based.                           
@@ -86,7 +92,7 @@ and will only be using the companies internal SQL database.
   can only go so far, and human error can still be a factor. I'm sure there are ways to check that input                
   data checks out with already existing data in the SQL database, but that is beyond the scope of this tool.                 
 
-## SECTION 6 Open Questions              
+### SECTION 6 Open Questions              
 
 - Will it be required to convert the SQL back into an Excell format?                          
 <!--out of ideas lol-->                                                 
