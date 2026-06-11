@@ -76,18 +76,15 @@ It will be using python, a free library and programming language
 and will only be using the companies internal SQL database.                                
                            
 ## SECTION 5 Out of Scope                     
+- This tool will not be used to view SQL, excel data.                           
+                                                           
+- This tool will not have a graphical UI and is strictly command line based.                           
+                                        
+- This tool will only output data to a chosen location. It will not be able to manage output data.                   
 
-- this tool will not be used to view sql, excel data
-
-- this tool will not have a grafical ui and is striclty command line based
-
-- this tool will not it will only output data to a              
-  chosen location it will not be abel to manage output data             
-
-- this tool will check for certan amount of user input error but isnt perfect,         
-  error verification can only go so far and human error can still be a factor.          
-  im sure there are ways to check that input data checks out with alredy existing         
-  data in the sql database but that is byond the scope of this tool      
+- This tool will check for a certain amount of user input error but isn't perfect. Error verification                     
+  can only go so far, and human error can still be a factor. I'm sure there are ways to check that input                
+  data checks out with already existing data in the SQL database, but that is beyond the scope of this tool.                 
 
 ## SECTION 6 Open Questions              
 
