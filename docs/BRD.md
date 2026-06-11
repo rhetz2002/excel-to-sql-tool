@@ -4,22 +4,24 @@
 
 ## SECTION 1 Project Overview                   
 
-**What problem dose this tool solve**    
-this tool is designed to make the job of transfering an   
-excel file into a SQL database easy. it will be near automatic    
-with only requiring the user to provide an excel file instead of    
-manualy typing the data into the SQL database   
+**What problem dose this tool solve**         
+This tool is designed to make the job of transferring an        
+excel file into a SQL database easy. it will be near       
+automatic, only requiring the user to provide an excel file           
+instead of manually typing the data into the SQL database.         
 
-**Who will use this software and how often**   
-the emplyies of the company will use this software to transfer the data    
-into the SQL database. it will asumably be used quite frequent with many    
-in the company
+**Who will use this software and how often**                          
+The employees of the company will use this software to               
+transfer the data into the SQL database. It will assumably               
+be used quite frequent with many people in the company.               
 
-**What will success look like for the client**    
-sucsess will be the transfer of infromation from the excel file into the SQL   
-database. sucsess will also entale absolutly no errors from valid data or     
-modification to valid data upon transfer of the data into the SQL database.    
-if invalid data is input or a unforseen error ocures it should output an error log.  
+**What will success look like for the client**             
+Success will be the transfer of information from the            
+excel file into the SQL database. Success will also entail             
+absolutely no errors from valid data or modification to valid            
+data upon transfer of the data into the SQL database. If invalid            
+data is input or an unforeseen error occurs, it should prompt               
+an error and output an error log instead of transferring the data.                
 
 ## SECTION 2 Stakeholders                    
 
