@@ -88,9 +88,9 @@ and will only be using the companies internal SQL database.
 
 ## SECTION 6 Open Questions              
 
-- will it be rquired to convert the sql back into an excel format?          
-<!--out of ideas lol-->           
-- would you like to controll where the output data is droped or a        
-  preechosen location? (likely a folder next to the python program)         
-<!--really out of ideas-->          
-- is there anything in this BDR that i forgot to mention that is needed in the tool
+- Will it be required to convert the SQL back into an Excell format?                          
+<!--out of ideas lol-->                                                 
+- Would you like to control where the output data is dropped or just a                       
+  prechosen location? (likely a folder next to the program)                     
+<!--really out of ideas-->                                                              
+- Is there anything in this BDR that I forgot to mention, that is needed in the tool?            
