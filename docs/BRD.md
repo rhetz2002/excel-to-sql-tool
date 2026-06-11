@@ -104,4 +104,4 @@ and will only be using the comapnies internal SQL database
 - would you like to controll where the output data is droped or a        
   preechosen location? (likely a folder next to the python program)         
 <!--really out of ideas-->          
-- is there anything in this BDR that i forgot to mention that is needed on the tool
+- is there anything in this BDR that i forgot to mention that is needed in the tool
