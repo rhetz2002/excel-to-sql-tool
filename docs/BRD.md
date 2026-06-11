@@ -25,12 +25,12 @@ an error and output an error log instead of transferring the data.
 
 ## SECTION 2 Stakeholders                    
 
-**Who is the client / end user** 
-the client is the hiring company with 
-the end user being the employees and company 
+**Who is the client / end user**            
+the client is the hiring company with              
+the end user being the employees and company                
 
-**Who is the developer** 
-I Myles Tollefson am the developer  
+**Who is the developer**                 
+I Myles Tollefson am the developer                   
 
 <!-- really hope this is good....-->
 
