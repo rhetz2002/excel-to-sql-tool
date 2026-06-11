@@ -34,33 +34,26 @@ I Myles Tollefson am the developer
 
 <!-- really hope this is good....-->
 
-## SECTION 3 Functional Requirements: User Stories 
+## SECTION 3 Functional Requirements: User Stories              
+            
+- As a manager, I was to be able to pull up an up to date summary           
+  of the SQL database and see if there have been any errors and how many.              
+           
+- As an IT professional, I want to be able to be called in if there is an                     
+  error and have the ability to look at an output log of the error                  
+  to put me on the right track to solving the issue.                    
+                         
+- As an accountant, I want the system to be able to detect bad data                       
+  that way I don't have to worry about bad balances getting to my desk.                    
+                       
+- As a database analyst, I want to be able to load an Excell file on demand so                      
+  I can view the data in an easily readable format.                           
 
-- as a manager i was to be able to pull up an up to     
- date summery of the SQL database and see if there has      
- been any errors and how many     
+- As bookkeeper, I want to be able to insert a simple file to be input into                     
+  the SQL database to be stored in our SQL database without any additional hassle.                 
 
-- as an IT professional i want to be able to be called       
- in if there is an error and have the ability to look                
- at an output log of the error to put me on the right          
- track to solving the issue
-
-- as an acountant i want the system to be able to detect      
- invalid or corupt data that way i dont have to worry about        
- bad ballences geting to my desk
-
-- as a database analyst i want to be able to load a excell      
- file on damand so i can view the data in an easily       
- readable format
-
-- as bookeeper i want to be able to insert a simple file         
- to be input into an sql database in order to       
-be stored in our SQL datbase
-
-- as an operations manager i want to be able       
- to input a single file and run a single command        
- to convert the excell file to SQL so my staff         
- dosnt have to do it by hand       
+- As an operations manager, I want to be able to input a single file and run a single                       
+  command to convert the Excell file to SQL, so my staff doesn't have to do it by hand                          
 
 ## SECTION 4 Non-Functional Requirements                       
 
