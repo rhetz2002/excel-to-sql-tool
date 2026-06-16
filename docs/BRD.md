@@ -46,9 +46,10 @@ I Myles Tollefson am the developer
 
 ### SECTION 3 Functional Requirements: User Stories              
             
-- As a manager, I was to be able to pull up an up to date summary           
-  of the SQL database and see if there have been any errors and how many.              
-           
+- As a manager, I was to be able to pull up an up-to-date summary                
+  of the tools processing history, how many lines were added                  
+  and if there were any possessing errors                   
+                     
 - As an IT professional, I want to be able to be called in if there is an                     
   error and have the ability to look at an output log of the error                  
   to put me on the right track to solving the issue.                    
@@ -83,7 +84,8 @@ is installed on the system. It will be using the most recent version of python b
 
 **Constraints: free tools only, Python only, SQLite only (no external database server required)**                     
 It will be using python, a free library and programming language                        
-and will only be using the companies internal SQL database.                                
+and will only be using SQLite which creates an internal file        
+instead of using an SQL database                                
                            
 ### SECTION 5 Out of Scope                     
 - This tool will not be used to view SQL, excel data.                           
