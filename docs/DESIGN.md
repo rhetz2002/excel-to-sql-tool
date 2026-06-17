@@ -54,7 +54,8 @@ lines read, proccesed, and added to the sql database
             v                 
 [reaches the end of the data]             
 [exports the converted SQL]                 
-[into the database]```text               
+[into the database]
+```text               
           
                    
 ---      
