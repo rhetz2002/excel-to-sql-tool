@@ -15,5 +15,47 @@ after the tool is done running it will output a log of all the
 lines read, proccesed, and added to the sql database                                      
 
 ---
-## SECTION 1 prossess diagram
-[input Excell file]
+## SECTION 1 prossess diagram      
+      
+        little rusty in python     
+      
+          [input Excell file]       
+                  |      
+                  |      
+                  v       
+  [iterate over and validate Excell file]           
+                  |           
+                  v               
+[if data is valid]|[if data is invalid]              
+                 / \         
+                /   \               
+               /     \            
+              /       \              
+             /         \               
+            |           |             
+            |           |             
+            |           |                
+            |           |                
+            |           |                  
+            |           |                   
+            |    [stops prosessing and]               
+            |    [validation, outputs]              
+            |    [error log to terminal]                  
+            |                 
+            |                
+            v                       
+[continues to convert]                        
+[goes back two steps too]             
+["iterate.. ..Excell file"]                 
+[untill reache end of file]                        
+            |             
+            |                    
+            |               
+            v                 
+[reaches the end of the data]             
+[exports the converted SQL]                 
+[into the database]               
+          
+                   
+---      
+
