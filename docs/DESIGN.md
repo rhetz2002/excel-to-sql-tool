@@ -1,1 +1,1 @@
-## **section 1** Architecture Overview
+## SECTION 1, Architecture Overview
