@@ -18,8 +18,6 @@ lines read, proccesed, and added to the sql database
 ## SECTION 1 prossess diagram      
       
 ```text        
-      
-        little rusty in python
 
           [input Excell file]       
                   |      
