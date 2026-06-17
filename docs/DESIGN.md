@@ -17,7 +17,7 @@ lines read, proccesed, and added to the sql database
 ---
 ## SECTION 1 prossess diagram      
       
-        little rusty in python     
+```text   little rusty in python     
       
           [input Excell file]       
                   |      
@@ -54,7 +54,7 @@ lines read, proccesed, and added to the sql database
             v                 
 [reaches the end of the data]             
 [exports the converted SQL]                 
-[into the database]               
+[into the database]```text               
           
                    
 ---      
