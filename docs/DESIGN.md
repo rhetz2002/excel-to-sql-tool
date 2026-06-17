@@ -32,17 +32,12 @@ lines read, proccesed, and added to the sql database
                /     \            
               /       \              
              /         \               
-            |           |             
-            |           |             
-            |           |                
-            |           |                
-            |           |                  
-            |           |                   
+            |           |
+            |           v        
             |    [stops prosessing and]               
             |    [validation, outputs]              
             |    [error log to terminal]                  
-            |                 
-            |                
+            |                               
             v                       
 [continues to convert]                        
 [goes back two steps too]             
@@ -57,6 +52,33 @@ lines read, proccesed, and added to the sql database
 [into the database]
 ```               
           
-                   
 ---      
+## SECTION 2 Database Schema
+
+breakdown of database schema
+
+table name
+employee sales 
+
+coloumn names
+employee_ID : (intiger, primary key, required)
+employee_name : (text, required)
+employee_email : (text, required)
+department : (text)
+sales : (real)
+
+sql table creation
+
+CREATE TABLE employee_sales (
+
+    employee_ID int PRIMARY KEY, NOT NULL
+    employee_name text NOT NULL
+    employee_email text NOT NULL
+    department text
+    sales : real
+);
+
+---
+## SECTION 3 psudo code 
+
 
