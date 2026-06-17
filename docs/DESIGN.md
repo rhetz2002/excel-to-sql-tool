@@ -13,6 +13,7 @@ of the error in inot the command line
                          
 after the tool is done running it will output a log of all the 
 lines read, proccesed, and added to the sql database
+
 ---
 ## SECTION 1 prossess diagram
 [input Excell file]
