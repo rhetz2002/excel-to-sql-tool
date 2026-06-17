@@ -57,18 +57,18 @@ lines read, proccesed, and added to the sql database
 
 breakdown of database schema
 
-table name
-employee sales 
-
-coloumn names
-employee_ID : (intiger, primary key, required)
-employee_name : (text, required)
-employee_email : (text, required)
-department : (text)
-sales : (real)
-
-sql table creation
-
+table name                   
+employee sales                    
+                     
+coloumn names                      
+employee_ID : (intiger, primary key, required)                     
+employee_name : (text, required)                       
+employee_email : (text, required)                      
+department : (text)                   
+sales : (real)                    
+                    
+sql table creation                      
+                               
 CREATE TABLE employee_sales (
 
     employee_ID int PRIMARY KEY, NOT NULL
@@ -77,7 +77,7 @@ CREATE TABLE employee_sales (
     department text
     sales : real
 );
-
+                        
 ---
 ## SECTION 3 psudo code 
 
