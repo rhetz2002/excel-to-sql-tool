@@ -10,7 +10,7 @@ and if its valid it will convert and output valid SQL into an
 exsisting sql database. if it is read as invalid it will stop              
 reading at the point of error and output an overview                
 of the error in inot the command line
-
+                         
 after the tool is done running it will output a log of all the 
 lines read, proccesed, and added to the sql database
 ---
