@@ -130,13 +130,13 @@ Excel-To-SQL-Tool
 ├── main.py                  
 ├── validation.py                
 ├── log_output.py               
-├── excell2SQL.py
+├── excell2SQL.py                     
 ├── excell_read.py              
 ├── input/                 
-│     └── input.xlsx     
-├── sql_out.py
+│     └── input.xlsx                 
+├── sql_out.py                     
 ├──docs/             
-└──README.md
+└──README.md                  
 
 
 
