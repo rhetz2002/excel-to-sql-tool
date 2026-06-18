@@ -87,7 +87,7 @@ this will run under the assumption that its ment to export data
 fitting the upper infromation and only that data
 
 main.py
-
+```text
 def main():
 
     open(excell file)
@@ -117,18 +117,19 @@ def main():
     loop(for number of columns)
 
         loop(for number of rows)
+```
 
-## SECTION 4 File & Folder Structure
-    
-overall folder structre
-
-Excel-To-SQL-Tool    
-├── main.py
-├── validation.py
-├── log_output.py
-├── excell_read.py
-├── input
-      ├── input.xlsx
+## SECTION 4 File & Folder Structure              
+              
+overall folder structre             
+           
+Excel-To-SQL-Tool             
+├── main.py                  
+├── validation.py                
+├── log_output.py               
+├── excell_read.py              
+├── input                 
+      ├── input.xlsx                  
 
 
 
