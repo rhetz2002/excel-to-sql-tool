@@ -89,37 +89,90 @@ fitting the upper infromation and only that data
 
 
 ```text
-main.py
 
-def main():
+main():
 
-    open
+    read_excel(input/filename.xlsx)
 
-    data = []
+    placeholder_for_data = []
     
-    load line(excell file)
+    load section in (filename.xlsx)
 
     loop(untill end of file or invalid data is read):
 
-        read line(Exell.file)
+        read row (filename.xlsx)
 
-        validate data
-        
+        validate_row()
+
+            end process
+                
+                print error log to terminal
+
         if (data is valid)
             
-            store data to data list
+            add data to placeholder_for_data
 
-            load next line                
+            load next row                
 
         else 
+
+            end proccess
 
             print error log to terminal
     
     read data list to veriffy data
-    
-    loop(for number of columns)
 
-        loop(for number of rows)
+    load first section in placeholder_for_data
+ 
+    loop(for number of rows)
+        
+        if (required) check (if not null)
+            
+            if null, fail validation
+
+            end proccess
+
+            print error log    
+
+        if (should be text) check (if text)
+            
+            if not text, fail validation
+
+            end proccess
+
+            print error log
+
+        if (should be int) check if (int)
+            
+            if not int fail validaton
+
+            end proccess
+
+            print error log
+
+        if (should be real) check if (real)
+            
+            if not real fail validation
+
+            end proccess
+
+            print error log
+        
+        load next section in placeholder_for_data
+
+    
+    load SQLite file
+
+        for (elements in placeholder for data)
+
+            insert_row(R,C)
+
+    print output log 
+
+    apend output log to opertation log
+
+    end 
+        
 ```
 
 ## SECTION 4 File & Folder Structure              
@@ -136,8 +189,17 @@ Excel-To-SQL-Tool
 │     └── input.xlsx                 
 ├── sql_out.py                     
 ├──docs/             
-└──README.md                  
+└──README.md              
+                                    
+## SECTION 5                                   
+secondary python libraries to be used                         
+                                        
+pandas (for reading Excell files)                             
+sqlite3 (for SQL database)                                       
+argparse(for accepting filepath as commandline argument)                          
+logging (for writing errors to logs)                                  
 
+hope this is good
 
 
 
