@@ -81,4 +81,58 @@ CREATE TABLE employee_sales (
 ---
 ## SECTION 3 psudo code 
 
+rundown of the proccess of the tool
+
+this will run under the assumption that its ment to export data 
+fitting the upper infromation and only that data
+
+main.py
+
+def main():
+
+    open(excell file)
+
+    data = []
+    
+    load line(excell file)
+
+    loop(untill end of file or invalid data is read):
+
+        read line(Exell.file)
+
+        validate data
+        
+        if (data is valid)
+            
+            store data to data list
+
+            load next line                
+
+        else 
+
+            print error log to terminal
+    
+    read data list to veriffy data
+    
+    loop(for number of columns)
+
+        loop(for number of rows)
+
+## SECTION 4 File & Folder Structure
+    
+overall folder structre
+
+Excel-To-SQL-Tool    
+├── main.py
+├── validation.py
+├── log_output.py
+├── excell_read.py
+├── input
+      ├── input.xlsx
+
+
+
+
+
+
 
