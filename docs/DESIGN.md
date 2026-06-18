@@ -97,11 +97,9 @@ main():
 
     placeholder_for_data = []
     
-    load section in (filename.xlsx)
+    read row (filename.xlsx)
 
     loop(until end of file or invalid data is read):
-
-        read row (filename.xlsx)
 
         validate_row()
 
