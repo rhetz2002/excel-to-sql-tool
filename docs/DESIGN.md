@@ -48,6 +48,7 @@ lines read, proccesed, and added to the sql database
             |               
             v                 
 [reaches the end of the data]             
+[one last validation read]
 [exports the converted SQL]                 
 [into the database]
 ```               
@@ -86,11 +87,13 @@ rundown of the proccess of the tool
 this will run under the assumption that its ment to export data 
 fitting the upper infromation and only that data
 
-main.py
+
 ```text
+main.py
+
 def main():
 
-    open(excell file)
+    open
 
     data = []
     
@@ -127,10 +130,13 @@ Excel-To-SQL-Tool
 ├── main.py                  
 ├── validation.py                
 ├── log_output.py               
+├── excell2SQL.py
 ├── excell_read.py              
-├── input                 
-      ├── input.xlsx                  
-
+├── input/                 
+│     └── input.xlsx     
+├── sql_out.py
+├──docs/             
+└──README.md
 
 
 
