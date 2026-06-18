@@ -70,13 +70,13 @@ sales: (real)
                     
 SQL table creation                                                   
                                             
-CREATE TABLE employee_sales ( 
-
-employee_ID int PRIMARY KEY, NOT NULL 
-employee_name text NOT NULL 
-employee_email text NOT NULL 
-department text 
-sales : real 
+CREATE TABLE employee_sales (                                           
+                                         
+employee_ID int PRIMARY KEY, NOT NULL                           
+employee_name text NOT NULL                                       
+employee_email text NOT NULL                                             
+department text                                      
+sales real                                                          
 ); 
                         
 ---                        
