@@ -23,7 +23,7 @@ lines read, processed, and added to the SQL database.
                   |      
                   |      
                   v       
-  [iterate over and validate Excell file]           
+  [iterate over and validate row in Excell file]           
                   |           
                   v               
 [if data is valid]|[if data is invalid]              
@@ -34,24 +34,34 @@ lines read, processed, and added to the SQL database.
              /         \               
             |           |
             |           v        
-            |    [stops processing and]               
-            |    [validation, outputs]              
-            |    [error log to terminal]                  
-            |                               
-            v                       
-[continues to convert,]                                      
-[goes back two steps too]                         
-["iterate.. ..Excell file"]                                 
-[repeat this process until]                       
-[it reaches end of the file]                                   
-            |             
-            |                    
-            |               
-            v                 
-[reaches the end of the data]                    
-[one last validation read]                             
-[exports the converted SQL]                 
-[into the database]                          
+            |    [skip row, output error]               
+            |    [into terminal, go to next]              
+            |    [row, go back two steps]
+            |    [unles at end of data]                  
+            |    [then go to next step]     
+            v                |       
+[continues to convert]       |                              
+[goes back two steps too]    |                     
+["iterate.. ..Excell file"]  |                               
+[repeat this process until]  |                     
+[it reaches end of the file] |                                  
+             |               |
+             |               |
+              \             /
+               \           /
+                \         /
+                 \       /
+                  \     /
+                   \   / 
+                    \ /
+                     |             
+                     |                    
+                     |               
+                     v                  
+        [reaches the end of the data]                    
+        [one last validation read]                             
+        [exports the converted SQL]                 
+        [into the database]                          
 ```               
           
 ---      
