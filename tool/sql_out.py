@@ -10,7 +10,7 @@ def out (data):
     
     # for while loop
     # while loop will not end untill sql 
-    # file is present and is set to true
+    # file is present and db_open is set to true
 
     db_open = False
 
@@ -27,13 +27,12 @@ def out (data):
 
         try: 
             
-            # stores data from data
+            # stores data from data variable
 
             data_store = []
 
-            # atempts to open file, purpoussfully made to fail if its not there as a qol feature 
-            # as a mesure to make sure the user knows that its not typed in corectly if fails and alredy exsists
-
+            # attempts to open file, purposefully made to fail if its not there as a qol feature   
+            # as a measure to make sure the user knows that its not typed in correctly, opens if alredy exsists
             database = sq.connect(f"file:{file_path}?mode=rw", uri=True)
 
             # if sucseeds initates cursor as db
@@ -44,6 +43,8 @@ def out (data):
 
             for index, row in data.iterrows():
                 
+                # reads row by row adds to data_store
+
                 data_store.append(data.at[index, 'ID'])
                 
                 data_store.append(data.at[index,'name'])
@@ -54,22 +55,29 @@ def out (data):
 
                 data_store.append(float(data.at[index, 'sales']))
                 
+                # executes SQL adding the data_store data into the SQL
+
                 db.execute("""
                         INSERT INTO employee_sales 
                         (employee_ID, employee_name, employee_email, department, sales) 
                         VALUES (?, ?, ?, ?, ?)""" ,
                 (data_store[0], data_store[1], data_store[2], data_store[3], data_store[4]))           
                 
+                # resets data_store
+
                 data_store = []
 
-            # will import the sql data to the db here
+            # rudamentery check to see if data was corectly added
 
             for row in db.execute("SELECT * FROM employee_sales"):
                 print(row)
+            
+            # commits and closes database
 
             database.commit()
             db.close()
-            # if sucsesffully opens file sets db_open to true
+            
+            # if sucsesffully opens file sets db_open to true to end the loop
 
             db_open = True
 
@@ -80,13 +88,14 @@ def out (data):
             if input ('there is no file in this location do you want to create one?[Y/N]: ').lower() == 'y' :
 
                 #creates file
+                
                 database = sq.connect(file_path)
+                
+                # initiates coursor as db
 
                 db = database.cursor()
 
                 # executes SQL here to create the data tables
-
-                
 
                 # im sure that theres a way to create the table depending on the contents 
                 # of the slxs file but for the puroposes of the asignment ill just hard code it 
@@ -103,6 +112,8 @@ def out (data):
 
                 for index, row in data.iterrows():
                 
+                    # reads row by row adds to data_store
+
                     data_store.append(data.at[index, 'ID'])
                 
                     data_store.append(data.at[index,'name'])
@@ -112,29 +123,37 @@ def out (data):
                     data_store.append(data.at[index, 'department'])
 
                     data_store.append(float(data.at[index, 'sales']))
-                
+
+                    # executes SQL adding the data_store data into the SQL
+
                     db.execute("""
                         INSERT INTO employee_sales 
                         (employee_ID, employee_name, employee_email, department, sales) 
                         VALUES (?, ?, ?, ?, ?)""",
                     (data_store[0], data_store[1], data_store[2], data_store[3], data_store[4]))           
                 
+                    # resets data_store
+
                     data_store = []
 
-                # will import the sql data to the db here
+                # rudamentery check to see if data was corectly added
                 
                 for row in db.execute("SELECT * FROM employee_sales"):
                     print(row)
+
+                # commits and closes database
 
                 database.commit()
                 
                 db.close()
                 
-                # if sucsesffully opens file sets db_open to true
+                # if sucsesffully opens file sets db_open to true to close the loop
                 
                 db_open = True
 
             else: 
+                
+                # if user selects no in last prompt, prompts user to input path to sql file again 
 
                 file_path = input ('input path to file, include file name: ')
 
