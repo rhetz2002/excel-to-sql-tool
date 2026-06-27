@@ -1,13 +1,18 @@
 #imports required lib
 import sqlite3 as sq
+import time
 
 
 #grabs variables from main.py
 
 # defines output function
 
-def out (data):
+def prossess (data):
     
+    # initiates log variable
+
+    log = ''
+
     # for while loop
     # while loop will not end untill sql 
     # file is present and db_open is set to true
@@ -16,7 +21,7 @@ def out (data):
 
     # user inputs path to file if no file exists one will be created
 
-    file_path = input ('input path to file, include file name: ')
+    file_path = input ('input path to database file, include file name: ')
 
     # while loop while var is false indicating there is no sql file 
     # the loop will continue, will end when var is true indicating sql file is present
@@ -37,6 +42,8 @@ def out (data):
 
             # if sucseeds initates cursor as db
             
+            log = log + f'{time.strftime("%I:%M:%S %p")}: opened {input}\n'
+
             db = database.cursor()
             
             # iterates over the data in data    
@@ -67,10 +74,7 @@ def out (data):
 
                 data_store = []
 
-            # rudamentery check to see if data was corectly added
-
-            for row in db.execute("SELECT * FROM employee_sales"):
-                print(row)
+            log = log + f'{time.strftime("%I:%M:%S %p")}: sucseffully inserted data from xlsx to {input}\n'            
             
             # commits and closes database
 
@@ -89,6 +93,8 @@ def out (data):
 
                 #creates file
                 
+                f'{time.strftime("%I:%M:%S %p")}: created new database file in {input}\n'
+
                 database = sq.connect(file_path)
                 
                 # initiates coursor as db
@@ -107,7 +113,7 @@ def out (data):
                         employee_email text NOT NULL,
                         department text,
                         sales real)""")                                                          
-            
+
                 #parses the data and saves in a list which is apended to the database
 
                 for index, row in data.iterrows():
@@ -136,10 +142,7 @@ def out (data):
 
                     data_store = []
 
-                # rudamentery check to see if data was corectly added
-                
-                for row in db.execute("SELECT * FROM employee_sales"):
-                    print(row)
+                log = log + f'{time.strftime("%I:%M:%S %p")}: sucseffully inserted data from xlsx to {input}\n'
 
                 # commits and closes database
 
@@ -155,7 +158,7 @@ def out (data):
                 
                 # if user selects no in last prompt, prompts user to input path to sql file again 
 
-                file_path = input ('input path to file, include file name: ')
+                file_path = input ('input path to database file, include file name: ')
 
 
 

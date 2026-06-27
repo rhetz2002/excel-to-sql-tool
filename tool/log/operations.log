@@ -1,0 +1,15 @@
+11:05:24 AM: opened file in input/input.xlsx
+11:05:24 AM: row 3 fail on ID check, pleas check that ID is present, is int, or not duplicated
+--------------------------------------------
+11:05:24 AM
+7 rows prossessed sucseffully
+1 rows failed
+--------------------------------------------
+None11:07:05 AM: opened file in input/input.xlsx
+11:07:05 AM: row 3 fail on ID check, pleas check that ID is present, is int, or not duplicated
+--------------------------------------------
+11:07:05 AM
+7 rows prossessed sucseffully
+1 rows failed
+--------------------------------------------
+None
