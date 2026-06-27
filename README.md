@@ -16,7 +16,7 @@ install python interpreter from official python website
 
 [https://www.python.org/downloads/](https://www.python.org/downloads/) 
 
-**Linux (Arch and Arch base systems) ** 
+**Linux (Arch and Arch base systems)** 
 
 install python interpreter through pacman  
 
