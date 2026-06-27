@@ -68,9 +68,10 @@ quality code. For example, if it looks like it runs but outputs an invalid outpu
                                  
 2 neatness/readability                            
                                    
-My second priority is writing code that can be read and understood at a glance. This is good for maintenance and long-term programming projects. I               
-vividly remember when I was first learning JavaScript a long time ago thinking “I'll remember how this works” and lo and behold I didn't remember.                
-Readability is one of the main influences of my programing style with ample spacing between lines and nearly every line of code commented.            
+My second priority is writing code that can be read and understood at a glance. This is good for                       
+maintenance and long-term programming projects. I vividly remember when I was first learning JavaScript                         
+a long time ago thinking “I'll remember how this works” and lo and behold I didn't remember. Readability is one                       
+of the main influences of my programing style with ample spacing between lines and nearly every line of code commented.                         
                                           
 3 runs well on target hardware                                             
                                                             
