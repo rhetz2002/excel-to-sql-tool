@@ -14,7 +14,7 @@ the information into a SQL .db file.
 
 install python interpreter from official python website  
 
-[text](https://www.python.org/downloads/) 
+[https://www.python.org/downloads/](https://www.python.org/downloads/) 
 
 **Linux (Arch and Arch base systems) ** 
 
