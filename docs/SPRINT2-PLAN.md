@@ -12,9 +12,9 @@ hopefully preventing further crashes from unexpected inputs.
 
 | # |     Item     |     Description     | Priority | Est. Hours | Source |
 | 1 |  validation  | detect duplicate ID |   High   |    3 - 4    |  self  |
-| - |validation  | validation incroectly marking as null | high | 3 - 4 | instructor feedback |
+| - | validation  | validation incroectly marking as null | high | 3 - 4 | instructor feedback |
 | 2 |  
 | 3 |
 | 4 |
 | 5 |
-| 6 |grammar errors|
+| 6 | grammar errors |
