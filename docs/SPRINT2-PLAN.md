@@ -16,5 +16,7 @@ hopefully preventing further crashes from unexpected inputs.
 | 2 | validation | validation incroectly marking as null | high | 3 - 4 | instructor feedback |
 | 3 | validation | verification could be tighter | high | 4 - 5 | self |
 | 4 | user input | user input uses input function and not comand line argument | med | 2 | instructor feedback |
-| 5 | 
-| 6 |
+| 5 | sql insertion | major amount of duplicate code | med | 1 | instructor feedback|
+| 6 | logging | log functionality dosnt work in SQL_output | med | 1 | instructor feedback |
+
+
