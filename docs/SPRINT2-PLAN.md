@@ -33,4 +33,4 @@ the input portion uses a function rather than it being all typed out.
                                                                           
 item 6 (log output): Done when the logs of SQL_output are correctly output                            
 into main and therefore appended to the operations logs.                   
-
+   
