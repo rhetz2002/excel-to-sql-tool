@@ -76,8 +76,8 @@
                                        
     Was already planning on it. I mentioned in the commenting above the two main                       
     input arguments that I meant this to be a temporary solution. My main goal for                  
-    this go round was to get this tool up and running like a prototype. will adjust 
-    the code as needed i didnt realize the argument portion though.                 
+    this go round was to get this tool up and running like a prototype. will adjust the 
+    code as needed i didnt realize the exact nature of the comand line argument portion though.                 
                              
 - **code duplication**                        
                           
