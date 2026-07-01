@@ -16,15 +16,21 @@ By the end of week seven, the tool will have tighter verification logic and erro
 
 **Definition of Done**
 
-item 1 (duplicate id): done when I can input an excel sheet with a duplicate ID and the row it is in will be rejected rather than cause a hard crash. 
-
-item 2 (incorrectly marking as null): Done when ID and sales with a zero value isn't marked as null and skipped but rather is kept as zero and used. 
-
-item 3 (tighter verification): Done when I've done all I can to make it functionally tight. I won't be able to make it perfect, but I'll add min character limit and valid character restrictions on the strings. 
-
-item 4 (using command line argument): Done when I have the user using command line arguments instead of having to type it out all by hand. 
-
-item 5 (code duplication): Done when I have the code in SQL_out lessened and the input portion uses a function rather than it being all typed out. 
-
-item 6 (log output): Done when the logs of SQL_output are correctly output into main and therefore appended to the operations logs. 
+item 1 (duplicate id): done when I can input an excel sheet with a duplicate ID                  
+and the row it is in will be rejected rather than cause a hard crash.                
+                           
+item 2 (incorrectly marking as null): Done when ID and sales with a zero value isn't                      
+marked as null and skipped but rather is kept as zero and used.                       
+                               
+item 3 (tighter verification): Done when I've done all I can to make it functionally tight. I won't                        
+be able to make it perfect, but I'll add min character limit and valid character restrictions on the strings.                      
+                                                           
+item 4 (using command line argument): Done when I have the user using command                 
+line arguments instead of having to type it out all by hand.                    
+                                                                             
+item 5 (code duplication): Done when I have the code in SQL_out lessened and                
+the input portion uses a function rather than it being all typed out.                      
+                                                                          
+item 6 (log output): Done when the logs of SQL_output are correctly output                            
+into main and therefore appended to the operations logs.                   
 
