@@ -60,6 +60,6 @@ except:
 
     operations.write(data_log)
 
-    operations.close
+    operations.close()
 
 # after opening writes data_log into operations.log
