@@ -15,10 +15,7 @@ hopefully preventing further crashes from unexpected inputs.
 | 1 |  validation  | detect duplicate ID |   High   |    3--4    |  self  |
 | - |
 | 2 |  validation  | validation incroectly marking as null |
-
 | 3 |
-
 | 4 |
-
 | 5 |
 | 6 |grammar errors|
