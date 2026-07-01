@@ -11,10 +11,9 @@ hopefully preventing further crashes from unexpected inputs.
 **blocking table**
 
 | # |     Item     |     Description     | Priority | Est. Hours | Source |
-| - |--------------|---------------------|----------|------------|--------|
-| 1 |  validation  | detect duplicate ID |   High   |    3--4    |  self  |
-| - |
-| 2 |  validation  | validation incroectly marking as null |
+| 1 |  validation  | detect duplicate ID |   High   |    3 - 4    |  self  |
+| - |validation  | validation incroectly marking as null | high | 3 - 4 | instructor feedback |
+| 2 |  
 | 3 |
 | 4 |
 | 5 |
