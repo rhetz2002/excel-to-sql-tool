@@ -76,8 +76,8 @@
                                        
     Was already planning on it. I mentioned in the commenting above the two main                       
     input arguments that I meant this to be a temporary solution. My main goal for                  
-    this go round was to get this tool up and running like a prototype. I will start                
-    experimenting with sys.argv or argparse in the next go round.                    
+    this go round was to get this tool up and running like a prototype. will adjust 
+    the code as needed i didnt realize the argument portion though.                 
                              
 - **code duplication**                        
                           
