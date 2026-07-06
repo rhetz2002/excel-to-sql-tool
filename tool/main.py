@@ -5,24 +5,24 @@ from excell_open import read
 from SQL_output import prossess
 from validation import validate
 
-# initates var data_log to store operations log 
+# initates var data_log to store operations log
 # which will be exported to external log file
 
 data_log = ''
 
-# runs read from excell_open.py retreving the 
-# data from it in a tupple under data and log data 
+# runs read from excell_open.py retreving the
+# data from it in a tupple under data and log data
 # is the excell data and log is the operations log
 
-data, log  = read()
+data, log = read()
 
 # apeneds the log data from log to data_log for "running total?"
 
 data_log = data_log + log
 
-# pases data variable through vailidate function from 
+# pases data variable through vailidate function from
 # validation.py retreving output data in tupple form
-# clean_data and log. clean data is verified data free 
+# clean_data and log. clean data is verified data free
 # of known errors. log is log file data
 
 clean_data, log = validate(data)
@@ -44,9 +44,9 @@ data_log = data_log + str(log)
 
 print('sucsess')
 
-# trys to open using x for exclusive creation, will fail if alredy exsists 
+# trys to open using x for exclusive creation, will fail if alredy exsists
 
-try: 
+try:
     operations = open('log/operations.log', 'x')
 
     operations.write(data_log)
