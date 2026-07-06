@@ -2,16 +2,16 @@
 
 modified the coding structure in section 3. 
 
-main modification in the sudo code is the repromts to make sure that the program sucsessfully opens the input and output locations. its an error handeler as well as a QoL feature for the user. also updated a verification logic and finalised output prossess. planned to have the program quit after a single bad input but now it stores a log of the bad inputs and outputs the good data into the db and rejects the bad data with a list of the bad points to the user as a log.
+The main modification in the pseudo code is the re-prompts to make sure that the program successfully opens the input and output locations. It's an error handler as well as a QoL feature for the user. I also updated the verification logic and finalized the output process. I planned to have the program quit after a single bad input but now it stores a log of the bad inputs and outputs the good data into the db and rejects the bad data while outputting a list of the bad points to the user as a log. 
 
-section 4 folder structre
+section 4 folder structure 
 
-removed log_output as it is reduntant also added the tool subfolder and the log folder, tool folder is for orginisation reasons and the log folder holds the operaitons log
+Removed log_output as it is redundant. I also added the tool subfolder and the log folder. Tool folder is for organization reasons, and the log folder holds the operations log 
 
-section 5 secondary libraries
-removed logging as is redundant
-may add another library to use in order to check for a file present
+section 5 secondary libraries                                   
 
+Removed logging as it is redundant, may add another library to use to check if a file present                                   
+                             
 ## SECTION 1, Program Overview                   
 Overview of the tool’s processes                       
 ---                  
