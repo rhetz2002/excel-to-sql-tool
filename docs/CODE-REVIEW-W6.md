@@ -91,47 +91,46 @@ tried to get as many 'interesting' ones as possible
 
 ### PART 3 — Error Handling Audit
 
-- 1 user inputs invalid input file in excell_open.py
+- 1 User inputs invalid input file in excell_open.py
 
-    is handeled by prompting user to re input file path
+    Is handled by prompting user to re input file path 
 
-- 2 couldnt open a db / no db found in user inputed output directory
+- 2 Couldn't open a db / no db found in user input output directory 
 
-    is handled by prompting the user, asking if they want to create one
+    Is handled by prompting the user, asking if they want to create one
 
-    if user selects no they will be asked again to input output directory
+    If user selects no they will be asked again to input output directory
 
-    could add a quit option here as well as a way to close the tool in the event
-    that its an issue with acsess so they can fix it and come back to it
+    Could add a quit option here as well this way if it's not a user error and some computer issue. the user can close the tool fix it and come back later 
 
-- 3 missing/missmatched coloumn headers in input file
+- 3 Missing/mismatched column headers in input file
 
-    curently no error handelling outside of it automatically failling the row the moment it reaches the couloumn in question
+    Currently no error handling outside of it automatically failing the row the moment it reaches the column in question in the validation step. 
 
-    prety sure there is a better way to handle it but it dosnt cause a hard crash and does instruct the user to check the sheet
+    Pretty sure there is a better way to handle it, but it doesn't cause a hard crash and does instruct the user to check the sheet. 
 
-    is not in my sprint plan and as of right now it dosnt pose any risks to the tools function, as an error handeller for another process covers it it could just be handelled more gracefully
+    Is not in my sprint plan and as of right now and it doesn't pose any risks to the tools function. An error handler for another process covers it. It could just be handled more gracefully. 
 
 - 4 miss matched headers in target output file
 
-    curently there is partal error handelling here as the part of the code that atempts to append infromation to a pre exsisting db will fall back on creating a new db if it fails to run properlly
+    Currently there is partial error handling here as the part of the code that attempts to append information to a preexisting db will fall back on creating a new db if it fails to run properly. 
 
-    curently not in my sprint plan
+    Currently not in my sprint plan. 
 
-    the partal error handelling should be able to keep it running satable with no bad data geting through to the database. still should add some sort of quit option like in the previous item, to give user chance to investigat the issue before comeing back at this point probably best to keep it as is
+    The partial error handling should be able to keep it running stable with no bad data getting through to the database. still should add some sort of quit option like in the previous item, to give the user a chance to investigate the issue before coming back. At this point it is probably best to keep it as is. 
 
-- 5 unable to acsess user input output direcotry on SQL_output step line 91
+- 5 unable to access user input output directory on SQL_output step line 91 
 
-    curently no error handelling here whatsoever 
+    Currently no error handling here whatsoever.  
 
-    is not in my sprint plan 
+    It is not in my sprint plan. 
 
-    is not important to data integrity but i feel it is also important to try to make it run as smooth as posible but for underlying funcunaltiy i think its best to leave it off my sprint plan for now
+    Is not important to data integrity but I feel it is also important to try to make it run as smooth as possible. But for underlying functionality I think it's best to leave it off my sprint plan for now. 
 
 - 6 unable to write into operations log 
 
-    curently no error handelling here
+    Currently no error handling here. 
 
-    not in my sprint plan
+    Not in my sprint plan. 
 
-    will ad as i feel its important for the user to have the operations log on hand
+    Will add to it as I feel it's important for the user to have the operations log on hand. 
