@@ -82,16 +82,47 @@ tried to get as many 'interesting' ones as posible
 
 ### PART 3 — Error Handling Audit
 
-- 1
+- 1 user inputs invalid input file in excell_open.py
 
-- 2
+    is handeled by prompting user to re input file path
 
-- 3
+- 2 couldnt open a db / no db found in user inputed output directory
 
-- 4
+    is handled by prompting the user, asking if they want to create one
 
-- 5
+    if user selects no they will be asked again to input output directory
 
-- 6
+    could add a quit option here as well as a way to close the tool in the event
+    that its an issue with acsess so they can fix it and come back to it
 
-- 7
+- 3 missing/missmatched coloumn headers in input file
+
+    curently no error handelling outside of it automatically failling the row the moment it reaches the couloumn in question
+
+    prety sure there is a better way to handle it but it dosnt cause a hard crash and does instruct the user to check the sheet
+
+    is not in my sprint plan and as of right now it dosnt pose any risks to the tools function, as an error handeller for another process covers it it could just be handelled more gracefully
+
+- 4 miss matched headers in target output file
+
+    curently there is partal error handelling here as the part of the code that atempts to append infromation to a pre exsisting db will fall back on creating a new db if it fails to run properlly
+
+    curently not in my sprint plan
+
+    the partal error handelling should be able to keep it running satable with no bad data geting through to the database. still should add some sort of quit option like in the previous item, to give user chance to investigat the issue before comeing back at this point probably best to keep it as is
+
+- 5 unable to acsess user input output direcotry
+
+    curently no error handelling here whatsoever 
+
+    is not in my sprint plan 
+
+    is not important to data integrity but i feel it is also important to try to make it run as smooth as posible but for underlying funcunaltiy i think its best to leave it off my sprint plan for now
+
+- 6 unable to write into operations log 
+
+    curently no error handelling here
+
+    not in my sprint plan
+
+    will ad as i feel its important for the user to have the operations log on hand
