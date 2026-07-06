@@ -73,7 +73,7 @@ tried to get as many 'interesting' ones as possible
 
     I think the main thing I'd be embarrassed by is the heavy use of try and except to check if a file is present. It came to my attention that putting that much code in try is bad practice. Plus, I think there must be a more “graceful” way to verify the presence of a file. 
 
-- 2 validate()
+- 2 validate
 
     It’s doing one job split into two parts that I feel would be impractical to split. It's checking for good data and logging the bad.
 
@@ -81,7 +81,7 @@ tried to get as many 'interesting' ones as possible
 
     I have a number of things here that I'm a bit embarrassed by. I've already talked ad nauseam about the less than tight validation logic, but I'm also a bit iffy on the giant if chain. Even though I designed it that way on purpose to trigger an exception in the event of just one part of the row is bad. It just looks like there's a cleaner way. There’s also the extreme reliance on try except again. I can't help but feel like I could have used better options here all around. 
 
-- 3 prossess()
+- 3 prossess
 
     This one I'm unsure on. I mean all its doing is taking the data that was output from validate and inserting it into the output file but it's also checking for the presence of the file therefore I should yet again be able to split it up a bit more. 
 
