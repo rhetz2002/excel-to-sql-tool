@@ -111,7 +111,7 @@ tried to get as many 'interesting' ones as posible
 
     the partal error handelling should be able to keep it running satable with no bad data geting through to the database. still should add some sort of quit option like in the previous item, to give user chance to investigat the issue before comeing back at this point probably best to keep it as is
 
-- 5 unable to acsess user input output direcotry
+- 5 unable to acsess user input output direcotry on SQL_output step line 91
 
     curently no error handelling here whatsoever 
 
