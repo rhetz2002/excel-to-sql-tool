@@ -20,13 +20,15 @@ def read():
 
     file = input('enter path to xlsx file: ')
 
-    # atempts to open users input file path ment to fail if user inputs an invalid path
+    # atempts to open users input file path
+    # ment to fail if user inputs an invalid path
 
     try:
 
         data = pd.read_excel(file)
 
-        # adds line to log that the file was sucsessfully opened including timestamp
+        # adds line to log that the file was
+        # sucsessfully opened including timestamp
 
         log = f'{time.strftime("%I:%M:%S %p")}: opened file in {file}\n'
 
@@ -34,7 +36,7 @@ def read():
 
         opened = True
 
-    except:
+    except FileError:
 
         # check wether that opened is flase or true leaves loop if true
 
@@ -42,36 +44,42 @@ def read():
 
             # adds that user failed to open file to log
 
-            log = log + f'{time.strftime("%I:%M:%S %p")}: failed to open file in {file} reprompting user input\n'
+            log = log + f'{time.strftime("%I:%M:%S %p")}: failed to ' \
+                        f'open file in {file} reprompting user input\n'
 
             # promts user to re-enter file path with sugestion
 
-            file = input('no file in directory please make sure u have the full file name including file extension: ')
+            file = input('no file in directory please make sure u have '
+                         'the full file name including file extension: ')
 
             # another try except statement to check if input file is valid
 
             try:
 
-                # trys to open file will fail and move to except statment if invalid
+                # trys to open file will fail and
+                # move to except statment if invalid
 
                 data = pd.read_excel(file)
 
                 # adds fact that file was sucsessfully opened to log
 
-                log = log + f'{time.strftime("%I:%M:%S %p")}: opened file in {file}\n'
+                log = log + f'{time.strftime("%I:%M:%S %p")}: ' \
+                            f'opened file in {file}\n'
 
                 # print file sucsesffuly opened to terminal
 
-                print(f'{time.strftime("%I:%M:%S %p")}: opened file in {file}\n')
+                print(f'{time.strftime("%I:%M:%S %p")}: '
+                      f'opened file in {file}\n')
 
                 # set opened to true
 
                 opened = True
 
-            except:
+            except FileError:
 
                 # promts user to re-enter file path with sugestion
 
-                log = log + f'{time.strftime("%I:%M:%S %p")}: failed to open file in {file} reprompting user input\n'
+                log = log + f'{time.strftime("%I:%M:%S %p")}: failed to ' \
+                            f'open file in {file} reprompting user input\n'
 
     return data, log
