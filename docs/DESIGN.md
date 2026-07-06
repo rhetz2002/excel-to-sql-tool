@@ -131,7 +131,7 @@ except
         read_Excell(input/filename.xlsx)
     
     placeholder_for_data = []
-------(updated)------
+----------------------------------------------------(updated)----------------------------------------------------
     for rows and columns in file
 
         loop(until end of file):
@@ -147,7 +147,7 @@ except
             except
                 
                 store row and index for error log
---------------------
+-----------------------------------------------------------------------------------------------------------------
     while db is unoppened
 
         try 
@@ -158,7 +158,7 @@ except
 
                 insert row into db
         
-------(updated)------
+----------------------------------------------------(updated)----------------------------------------------------
         except
 
             while unoppened 
@@ -176,7 +176,7 @@ except
                 else
 
                     prompt user to input file
-----------------------
+-----------------------------------------------------------------------------------------------------------------
     Close (SQLite file)
 
     print output log to terminal
