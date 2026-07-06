@@ -1,3 +1,17 @@
+## Phase 2 Changes (Week 6)
+
+modified the coding structure in section 3. 
+
+main modification in the sudo code is the repromts to make sure that the program sucsessfully opens the input and output locations. its an error handeler as well as a QoL feature for the user. also updated a verification logic and finalised output prossess. planned to have the program quit after a single bad input but now it stores a log of the bad inputs and outputs the good data into the db and rejects the bad data with a list of the bad points to the user as a log.
+
+section 4 folder structre
+
+removed log_output as it is reduntant also added the tool subfolder and the log folder, tool folder is for orginisation reasons and the log folder holds the operaitons log
+
+section 5 secondary libraries
+removed logging as is redundant
+may add another library to use in order to check for a file present
+
 ## SECTION 1, Program Overview                   
 Overview of the tool’s processes                       
 ---                  
@@ -58,8 +72,7 @@ lines read, processed, and added to the SQL database.
                      |                    
                      |               
                      v                  
-        [reaches the end of the data]                    
-        [one last validation read]                             
+        [reaches the end of the data]                                                 
         [exports the converted SQL]                 
         [into the database]                          
 ```               
@@ -93,7 +106,9 @@ sales real
 ## SECTION 3 psudo code                             
                                 
 SECTION 3 pseudo code                                 
-                                           
+
+> Updated — Week 6: [restructred validation logic and repormpting user process, no longer quits after a single bad row]
+
 rundown of the process of the tool                       
                                                  
 this will run under the assumption that it's meant to                                   
@@ -101,78 +116,65 @@ export data fitting the upper schema and only that data
                                          
 ```text
 
-main():
+ask user for file path
 
+try
+    
     read_Excell(input/filename.xlsx)
 
+except 
+
+    while file unopened
+
+        ask user for file
+
+        read_Excell(input/filename.xlsx)
+    
     placeholder_for_data = []
-    
-    read row (filename.xlsx)
 
-    loop(until end of file or invalid data is read):
+    for rows and columns in file
 
-        validate_row()
+        loop(until end of file):
 
-        if (data is valid)
+            try 
+                if (ID is valid)
+                    if (name is valid)
+                        if (email is valid)
+                            if (sales is valid)
+                                if (department is valid)
+                                    add data to placeholder_for_data
             
-            add data to placeholder_for_data
+            except
+                
+                store row and index for error log
 
-            load next row                
+    while db is unoppened
 
-        else 
+        try 
+            
+            open db
 
-            end proccess
+            for rows and columns in file
 
-            print error log to terminal
-    
-     read data list to verify data
-
-    load first section in placeholder_for_data
- 
-    loop (for number of rows)
+                insert row into db
         
-        if (required) check (if not null)
-            
-            if null, fail validation
+        except
 
-            end proccess
+            while unoppened 
 
-            print error log    
+                if
 
-        if (should be text) check (if text)
-            
-            if not text, fail validation
+                    prompt user if they want to create a new db
+                    
+                        create db
 
-            end proccess
+                            for rows and columns in file
 
-            print error log
+                                insert row into db
 
-        if (should be int) check if (int)
-            
-            if not int fail validaton
+                else
 
-            end proccess
-
-            print error log
-
-        if (should be real) check if (real)
-            
-            if not real fail validation
-
-            end proccess
-
-            print error log
-        
-        load next section in placeholder_for_data
-
-    
-    load SQLite file
-
-        for (elements in placeholder for data)
-
-            insert_row(R,C)
-
-    Close (filename.xlsx) 
+                    prompt user to input file
 
     Close (SQLite file)
 
@@ -186,26 +188,33 @@ main():
 ```
 
 ## SECTION 4 File & Folder Structure              
-              
+
 overall folder structure              
-           
+
+> Updated — Week 6: [removed log output, added tool and log folders, moved program files into tool folder]
+
 Excel-To-SQL-Tool             
-├── main.py                  
-├── validation.py                
-├── log_output.py               
-├── excell2SQL.py                     
-├── excell_read.py              
-├── input/                 
-│     └── input.xlsx                 
-├── sql_out.py                     
+├── tool/
+│    ├── main.py
+│    ├── validation.py                  
+│    ├── SQL_output.py                                  
+│    ├── excell_open.py              
+│    ├── output/
+│    │    └── output.db
+│    ├── input/                 
+│    │    └── input.xlsx                                     
+│    └── log/
+│         └── operations.log
 ├──docs/             
 └──README.md              
                                     
 ## SECTION 5                                   
 
 secondary python libraries to be used                         
-                                        
+
+> Updated — Week 6: [removed logging added pathlib]
+
 pandas (for reading Excell files)                             
 sqlite3 (for SQL database)                                       
 argparse (for accepting filepath as commandline argument)                          
-logging (for writing errors to logs)                                  
+pathlib (checking if file is present)
