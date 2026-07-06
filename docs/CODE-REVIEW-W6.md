@@ -45,7 +45,7 @@ tried to get as many 'interesting' ones as posible
                  
 ### PART 2 — Function-by-Function Review                           
                       
--1 read()           
+- 1 read()           
 
     looking at it through the lense of is it doing to much does show me i could of split it into two parts but im unsure of how paractical that would be.
     I do see its doing two jobs one is opening seeing if there is a file and the other is opening the file.
@@ -62,7 +62,7 @@ tried to get as many 'interesting' ones as posible
 
     i think the main think id be embarised by the HEAVY use of try and except to check if a file is present as it came to my atention that puting that much code in try is bad practice
 
--2 validate()
+- 2 validate()
 
     i think its safe to say that its doing one job split into two parts. its checking if its good data and loging the bad
 
@@ -72,7 +72,7 @@ tried to get as many 'interesting' ones as posible
     
     even though i designed it that way on purpose to trigger an exception it just dosnt look nice also the extreem relience on try except again. i cant help but feel like i could of used another better option here 
 
--3 prossess()
+- 3 prossess()
 
     this one im unsure i mean all its doing is takeing the data that was output from validate and inserting it into the output file but its also checking for the presence of the file so i could yet again split it up a bit more 
 
