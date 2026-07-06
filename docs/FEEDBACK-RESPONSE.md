@@ -85,4 +85,10 @@
                              
     Will make the code insertion portion into a sperate function from the table                               
     creation function and will pass the data through code insertion function.                         
-    The table creation function will be called depending on whether a table is present.                                                      
+    The table creation function will be called depending on whether a table is present.                 
+
+- **clean up README.md**
+
+    will adress
+
+    will try to be more thurogh in the instructions
