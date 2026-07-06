@@ -194,17 +194,17 @@ overall folder structure
 > Updated — Week 6: [removed log output, added tool and log folders, moved program files into tool folder]
 
 Excel-To-SQL-Tool             
-├── tool/
-│    ├── main.py
+├── tool/                  
+│    ├── main.py             
 │    ├── validation.py                  
 │    ├── SQL_output.py                                  
 │    ├── excell_open.py              
-│    ├── output/
-│    │    └── output.db
+│    ├── output/                   
+│    │    └── output.db                
 │    ├── input/                 
 │    │    └── input.xlsx                                     
-│    └── log/
-│         └── operations.log
+│    └── log/                    
+│         └── operations.log                      
 ├──docs/             
 └──README.md              
                                     
