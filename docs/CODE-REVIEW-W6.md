@@ -77,7 +77,7 @@ tried to get as many 'interesting' ones as possible
 
     It’s doing one job split into two parts that I feel would be impractical to split. It's checking for good data and logging the bad.
 
-    as mentioned above i think all my functions could be more explicit.
+    As mentioned above i think all my functions could be more explicit.
 
     I have a number of things here that I'm a bit embarrassed by. I've already talked ad nauseam about the less than tight validation logic, but I'm also a bit iffy on the giant if chain. Even though I designed it that way on purpose to trigger an exception in the event of just one part of the row is bad. It just looks like there's a cleaner way. There’s also the extreme reliance on try except again. I can't help but feel like I could have used better options here all around. 
 
