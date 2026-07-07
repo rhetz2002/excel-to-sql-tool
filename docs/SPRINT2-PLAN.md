@@ -9,10 +9,10 @@ By the end of week seven, the tool will have tighter verification logic and erro
 |---|------|----------------|----------|-------------|----------|
 | 1 | validation | detect duplicate ID |   med   |    3 - 4    |  self  |
 | 2 | validation | validation incorrectly marking as null | high | 3 - 4 / took 3 and a half hrs | instructor feedback | 
-| 3 | validation | verification could be tighter | high | 4 - 5 | self |
+| 3 | validation | verification could be tighter | high | 4 - 5 / took 1 and a half hrs | self |
 | 4 | user input | user input uses input function and not command line argument | med | 2 | instructor feedback |
 | 5 | sql insertion | major amount of duplicate code | med | 1 | instructor feedback|
-| 6 | logging | log functionality doesn't work in SQL_output  | med | 1 | instructor feedback |
+| 6 | logging | log functionality doesn't work in SQL_output  | med | 1 / took less than an hr| instructor feedback |
 
 **Definition of Done**
 
