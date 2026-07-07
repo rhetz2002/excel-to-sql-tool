@@ -36,7 +36,7 @@ def read():
 
         opened = True
 
-    except FileError:
+    except:
 
         # check wether that opened is flase or true leaves loop if true
 

@@ -27,6 +27,7 @@ data_log = data_log + log
 
 clean_data, log = validate(data)
 
+print (clean_data)
 # like line 21 appeneds log data to data_log
 
 data_log = data_log + log
