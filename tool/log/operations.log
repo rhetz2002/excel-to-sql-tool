@@ -43,3 +43,19 @@ None09:37:41 AM: opened file in input/input.xlsx
 --------------------------------------------
 09:46:07 AM: sucseffully created database in output/output.db
 09:46:07 AM: sucseffully inserted data from xlsx to output/output.db
+--------------------------------------------
+09:54:06 AM
+8 rows prossessed sucseffully
+1 rows failed
+--------------------------------------------
+09:54:19 AM: sucseffully created database in output/out.db
+09:54:19 AM: sucseffully inserted data from xlsx to output/out.db
+--------------------------------------------2026-07-07--------------------------------------------
+09:56:32 AM: opened file in input/input.xlsx
+--------------------------------------------
+09:56:32 AM
+8 rows prossessed sucseffully
+1 rows failed
+--------------------------------------------
+09:56:39 AM: sucseffully created database in output.output.db
+09:56:39 AM: sucseffully inserted data from xlsx to output.output.db

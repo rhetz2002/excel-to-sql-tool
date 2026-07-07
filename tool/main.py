@@ -5,11 +5,12 @@ from excell_open import read
 from SQL_output import prossess
 from validation import validate
 import sqlite3 as sq
+import time
 
 # initates var data_log to store operations log
 # which will be exported to external log file
 
-data_log = ''
+data_log = f'--------------------------------------------{time.strftime("%Y-%m-%d")}--------------------------------------------\n'
 
 # runs read from excell_open.py retreving the
 # data from it in a tupple under data and log data
