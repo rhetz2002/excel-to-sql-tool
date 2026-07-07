@@ -40,6 +40,7 @@ def prossess(data):
             # to fail if its not there as a qol feature
             # as a measure to make sure the user knows that
             # its not typed in correctly, opens if alredy exsists
+            
             database = sq.connect(f"file:{file_path}?mode=rw", uri=True)
 
             # if sucseeds initates cursor as db
@@ -88,7 +89,7 @@ def prossess(data):
 
             db_open = True
 
-        except FileError:
+        except:
 
             # if opening fails asks user if they want to create file
 

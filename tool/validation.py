@@ -57,20 +57,14 @@ def validate(data):
 
                             check = 6    
 
-                            if '@' in str(row['email']):
+                        if '@' in str(row['email']):
+                            if str(row['department']) in ['sales', 'customer service']:
+                                succsess = succsess + 1
+                            else:
+                                check = 8
+                        else:        
+                            check = 7    
                                 
-                        else:    
-
-                            check = 7
-
-
-                        if str(row['department']) in ['sales', 'customer service']:
-                                
-                            
-                        else: 
-                                
-                            check = 8
-
                     else:
 
                         check = 3 
@@ -89,7 +83,7 @@ def validate(data):
             if check == 0:
 
                 # adds one to sucsess to keep track of number good lines
-                succsess = succsess + 1
+                
 
                 print(f"row {index} sucsess")
 
@@ -106,7 +100,7 @@ def validate(data):
                 # resets check variable
                 check = 0
 
-            # uses check to see what part of line failed to insert into log
+            # uses check to see what part of line failed to insert into
             if check == 1 or check == 4:
 
                 log = log + f'{time.strftime("%I:%M:%S %p")}: row ' \
