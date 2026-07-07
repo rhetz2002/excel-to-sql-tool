@@ -45,7 +45,7 @@ def prossess(data):
 
             # if sucseeds initates cursor as db
 
-            log = log + f'{time.strftime("%I:%M:%S %p")}: opened {input}\n'
+            log = log + f'{time.strftime("%I:%M:%S %p")}: opened {file_path}\n'
 
             db = database.cursor()
 
@@ -78,7 +78,7 @@ def prossess(data):
                 data_store = []
 
             log = log + f'{time.strftime("%I:%M:%S %p")}: sucseffully ' \
-                        f'inserted data from xlsx to {input}\n'
+                        f'inserted data from xlsx to {file_path}\n'
 
             # commits and closes database
 
@@ -99,7 +99,7 @@ def prossess(data):
                 # creates file
 
                 f'{time.strftime("%I:%M:%S %p")}: created ' \
-                    f'new database file in {input}\n'
+                    f'new database file in {file_path}\n'
 
                 database = sq.connect(file_path)
 
@@ -113,6 +113,9 @@ def prossess(data):
                 # the table depending on the contents
                 # of the slxs file but for the puroposes
                 # of the asignment ill just hard code it
+                
+                log = log + f'{time.strftime("%I:%M:%S %p")}: sucseffully ' \
+                            f'created database in {file_path}\n'
 
                 db.execute(
                     """ CREATE TABLE employee_sales (
@@ -152,7 +155,7 @@ def prossess(data):
                     data_store = []
 
                 log = log + f'{time.strftime("%I:%M:%S %p")}: sucseffully ' \
-                            f'inserted data from xlsx to {input}\n'
+                            f'inserted data from xlsx to {file_path}\n'
 
                 # commits and closes database
 
@@ -170,5 +173,6 @@ def prossess(data):
                 # if user selects no in last prompt,
                 # prompts user to input path to sql file again
 
-                file_path = input('input path to database'
-                                  ' file, include file name: ')
+                file_path = input('input path to databasefile, include file name: ')
+
+    return log

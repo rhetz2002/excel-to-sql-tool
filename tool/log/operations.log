@@ -12,4 +12,34 @@ None11:07:05 AM: opened file in input/input.xlsx
 7 rows prossessed sucseffully
 1 rows failed
 --------------------------------------------
-None
+None09:37:41 AM: opened file in input/input.xlsx
+--------------------------------------------
+09:37:41 AM
+8 rows prossessed sucseffully
+1 rows failed
+--------------------------------------------
+09:38:02 AM: sucseffully inserted data from xlsx to <built-in function input>
+09:38:59 AM: opened file in input/input.xlsx
+--------------------------------------------
+09:38:59 AM
+8 rows prossessed sucseffully
+1 rows failed
+--------------------------------------------
+09:39:10 AM: sucseffully inserted data from xlsx to <built-in function input>
+09:41:31 AM: opened file in input/input.xlsx
+--------------------------------------------
+09:41:31 AM
+8 rows prossessed sucseffully
+1 rows failed
+--------------------------------------------
+09:41:38 AM: sucseffully created database in <built-in function input>
+09:41:38 AM: sucseffully inserted data from xlsx to <built-in function input>
+09:45:47 AM: failed to open file in input/input.db reprompting user input
+09:45:58 AM: opened file in input/input.xlsx
+--------------------------------------------
+09:45:58 AM
+8 rows prossessed sucseffully
+1 rows failed
+--------------------------------------------
+09:46:07 AM: sucseffully created database in output/output.db
+09:46:07 AM: sucseffully inserted data from xlsx to output/output.db
