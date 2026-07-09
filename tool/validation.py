@@ -1,11 +1,110 @@
 import pandas as pd
 import time
+import sqlite3 as sq
 
 
 # defines vaildate function
-def validate(data):
+def validate(file_path, data):
 
     log = ''
+
+    # for while loop
+    # while loop will not end untill sql
+    # file is present and db_open is set to true
+
+    db_open = False
+
+    # while loop while var is false indicating there is no sql file
+    # the loop will continue, will end when var is true
+    # indicating sql file is present
+
+    while (db_open is False):
+        
+        # trys to open file in file path
+
+        try:
+
+            # attempts to open file, purposefully made
+            # to fail if its not there as a qol feature
+            # as a measure to make sure the user knows that
+            # its not typed in correctly, opens if alredy exsists
+            
+            database = sq.connect(f"file:{file_path}?mode=rw", uri=True)
+
+            log = log + f'{time.strftime("%I:%M:%S %p")}: opened {file_path}\n'
+
+            db = database.cursor()
+            
+            # sets db_open to true to end loop
+
+            db_open = True
+
+        except:
+
+            # if opening fails asks user if they want to create file
+
+            if input('there is no file in this location '
+                     'do you want to create one?[Y/N]: ').lower() == 'y':
+
+                # creates file
+
+                f'{time.strftime("%I:%M:%S %p")}: created ' \
+                    f'new database file in {file_path}\n'
+
+                # creates db from input file path
+                
+                database = sq.connect(file_path)
+
+                # initiates coursor as db
+
+                db = database.cursor()
+
+                # executes SQL here to create the data tables
+
+                # im sure that theres a way to create
+                # the table depending on the contents
+                # of the xlsx file but for the puroposes
+                # of the asignment ill just hard code it
+                
+                log = log + f'{time.strftime("%I:%M:%S %p")}: sucseffully ' \
+                            f'created database in {file_path}\n'
+
+                # creates table in db
+
+                db.execute(
+                    """ CREATE TABLE employee_sales (
+                        employee_ID int PRIMARY KEY NOT NULL,
+                        employee_name text NOT NULL,
+                        employee_email text NOT NULL,
+                        department text,
+                        sales real)""")
+
+                # sets db to true
+
+                db_open = True
+
+            # else to reprompt user to input path
+
+            else:
+
+                # if user selects no in last prompt,
+                # prompts user to input path to sql file again
+
+                file_path = input('input path to database file, include file name: ')
+
+    # executes select to grab emploee ids
+
+    db.execute("SELECT employee_ID FROM employee_sales")
+
+    # stores ids in id_check
+
+    id_check = [row[0] for row in db] 
+
+    #--------------------------
+    # temp to check ids stored
+    #--------------------------
+
+    print(id_check)
 
     succsess = 0
 
@@ -48,49 +147,66 @@ def validate(data):
 
                             # checks that ID colomn is an intiger
 
-                            int(row['ID'])
+                            if int(row['ID']) not in id_check:
+
+                                
+                                try:
+
+                                    # checks that sales colounm is float
+
+                                    float(row['sales'])
                         
+                                except: 
+
+                                    # if it is not a float sets check to six to set the error
+
+                                    check = 6    
+
+                                # checks that department has a valid string
+
+                                if str(row['department']) in ['sales', 'customer service']:
+                            
+                                    # adds one to succsess to keep track of valid rows
+                            
+                                    succsess = succsess + 1
+
+                                else:
+                            
+                                    # if it is not valid sets check to eight to set the error
+                            
+                                    check = 8
+
+                            else:
+
+                                # if it is alredy in the db sets check to four to set the error
+
+                                check = 4
+
                         except:
 
                             # if it is not an intiger sets check to four to set the error
 
                             check = 4
 
-                        try:
-
-                            # checks that sales colounm is float
-
-                            float(row['sales'])
-                        
-                        except: 
-
-                            # if it is not a float sets check to six to set the error
-
-                            check = 6    
-
-                        # checks that department has a valid string
-
-                        if str(row['department']) in ['sales', 'customer service']:
-                            
-                            # adds one to succsess to keep track of valid rows
-                            
-                            succsess = succsess + 1
-                        
-                        else:
-                            
-                            # if it is not valid sets check to eight to set the error
-                            
-                            check = 8
-
                     else:
+
+                        # if is missing, or is missing @, or missing 
+                        # .com, or is les than 9 charicters long
+                        # sets check to 3 to set up for error mesage
 
                         check = 3 
 
                 else:
                 
+                    # if is missing or is less than 3 charicters  
+                    # long or has digit or missing a space
+                    # sets check to 2 to set up for error mesage       
+
                     check = 2                            
 
             else:
+
+                # if missing sets check to 1 to set up for error message
 
                 check = 1
 
@@ -98,7 +214,8 @@ def validate(data):
             # the check variable                    
 
             if check == 0:
-
+                
+                # if no errors
                 # adds one to sucsess to keep track of number good lines
                 
                 print(f"row {index} sucsess")
@@ -151,6 +268,8 @@ def validate(data):
                             f'fail on department check, pleas check that ' \
                             f'feild contains vaild department\n'
 
+    # prints pass fail mesage to terminal
+
     print(f"{succsess} rows prossessed sucseffully")
     if fail >= 1:
         print(f'{fail} rows failed,')
@@ -158,8 +277,11 @@ def validate(data):
     print('--------------------------------------------')
 
     # stores passing data in clean
+    # while removing bad rows
     
     clean = data.drop(bad_rows, axis=0)
+
+    # adds passing and failing lines to log
 
     log = log + '--------------------------------------------\n'
     log = log + f'{time.strftime("%I:%M:%S %p")}\n'

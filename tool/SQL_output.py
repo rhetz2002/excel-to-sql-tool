@@ -4,175 +4,54 @@ import time
 # defines output function
 
 
-def prossess(data):
+def prossess(file_path, data):
 
     # initiates log variable
 
     log = ''
 
-    # for while loop
-    # while loop will not end untill sql
-    # file is present and db_open is set to true
+    # stores data from data variable
 
-    db_open = False
+    data_store = []
 
-    # user inputs path to file if no file exists one will be created
-    # like in excell_open.py is temporarry design choice just to make sure it
-    # can run, will be switched with argparse or sys.argv in later vers
+    database = sq.connect(f"file:{file_path}?mode=rw", uri=True)
 
-    file_path = input('input path to database file, include file name: ')
+    db = database.cursor()
 
-    # while loop while var is false indicating there is no sql file
-    # the loop will continue, will end when var is true
-    # indicating sql file is present
+    # iterates over the data in data
 
-    while (db_open is False):
+    for index, row in data.iterrows():
 
-        # trys to open file in file path
+        # reads row by row adds to data_store
 
-        try:
+        data_store.append(data.at[index, 'ID'])
 
-            # stores data from data variable
+        data_store.append(data.at[index, 'name'])
 
-            data_store = []
+        data_store.append(data.at[index, 'email'])
 
-            # attempts to open file, purposefully made
-            # to fail if its not there as a qol feature
-            # as a measure to make sure the user knows that
-            # its not typed in correctly, opens if alredy exsists
-            
-            database = sq.connect(f"file:{file_path}?mode=rw", uri=True)
+        data_store.append(data.at[index, 'department'])
 
-            # if sucseeds initates cursor as db
+        data_store.append(float(data.at[index, 'sales']))
 
-            log = log + f'{time.strftime("%I:%M:%S %p")}: opened {file_path}\n'
+        # executes SQL adding the data_store data into the SQL
 
-            db = database.cursor()
+        db.execute("""
+                    INSERT INTO employee_sales
+                    (employee_ID, employee_name, employee_email, department, sales)
+                    VALUES (?, ?, ?, ?, ?)""",
+                    (data_store[0], data_store[1], data_store[2], data_store[3], data_store[4]))
 
-            # iterates over the data in data
+        # resets data_store
 
-            for index, row in data.iterrows():
+        data_store = []
 
-                # reads row by row adds to data_store
-
-                data_store.append(data.at[index, 'ID'])
-
-                data_store.append(data.at[index, 'name'])
-
-                data_store.append(data.at[index, 'email'])
-
-                data_store.append(data.at[index, 'department'])
-
-                data_store.append(float(data.at[index, 'sales']))
-
-                # executes SQL adding the data_store data into the SQL
-
-                db.execute("""
-                           INSERT INTO employee_sales
-                           (employee_ID, employee_name, employee_email, department, sales)
-                           VALUES (?, ?, ?, ?, ?)""",
-                           (data_store[0], data_store[1], data_store[2], data_store[3], data_store[4]))
-
-                # resets data_store
-
-                data_store = []
-
-            log = log + f'{time.strftime("%I:%M:%S %p")}: sucseffully ' \
+    log = log + f'{time.strftime("%I:%M:%S %p")}: sucseffully ' \
                         f'inserted data from xlsx to {file_path}\n'
 
-            # commits and closes database
+    # commits and closes database
 
-            database.commit()
-            db.close()
-
-            # if sucsesffully opens file sets db_open to true to end the loop
-
-            db_open = True
-
-        except:
-
-            # if opening fails asks user if they want to create file
-
-            if input('there is no file in this location '
-                     'do you want to create one?[Y/N]: ').lower() == 'y':
-
-                # creates file
-
-                f'{time.strftime("%I:%M:%S %p")}: created ' \
-                    f'new database file in {file_path}\n'
-
-                database = sq.connect(file_path)
-
-                # initiates coursor as db
-
-                db = database.cursor()
-
-                # executes SQL here to create the data tables
-
-                # im sure that theres a way to create
-                # the table depending on the contents
-                # of the slxs file but for the puroposes
-                # of the asignment ill just hard code it
-                
-                log = log + f'{time.strftime("%I:%M:%S %p")}: sucseffully ' \
-                            f'created database in {file_path}\n'
-
-                db.execute(
-                    """ CREATE TABLE employee_sales (
-                        employee_ID int PRIMARY KEY NOT NULL,
-                        employee_name text NOT NULL,
-                        employee_email text NOT NULL,
-                        department text,
-                        sales real)""")
-
-                # parses the data and saves in a
-                # list which is apended to the database
-
-                for index, row in data.iterrows():
-
-                    # reads row by row adds to data_store
-
-                    data_store.append(data.at[index, 'ID'])
-
-                    data_store.append(data.at[index, 'name'])
-
-                    data_store.append(data.at[index, 'email'])
-
-                    data_store.append(data.at[index, 'department'])
-
-                    data_store.append(float(data.at[index, 'sales']))
-
-                    # executes SQL adding the data_store data into the SQL
-
-                    db.execute("""
-                               INSERT INTO employee_sales
-                               (employee_ID, employee_name, employee_email, department, sales)
-                               VALUES (?, ?, ?, ?, ?)""",
-                               (data_store[0], data_store[1], data_store[2], data_store[3], data_store[4]))
-
-                    # resets data_store
-
-                    data_store = []
-
-                log = log + f'{time.strftime("%I:%M:%S %p")}: sucseffully ' \
-                            f'inserted data from xlsx to {file_path}\n'
-
-                # commits and closes database
-
-                database.commit()
-
-                db.close()
-
-                # if sucsesffully opens file sets
-                # db_open to true to close the loop
-
-                db_open = True
-
-            else:
-
-                # if user selects no in last prompt,
-                # prompts user to input path to sql file again
-
-                file_path = input('input path to databasefile, include file name: ')
+    database.commit()
+    db.close()
 
     return log

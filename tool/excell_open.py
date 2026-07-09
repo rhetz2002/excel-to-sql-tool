@@ -3,7 +3,7 @@ import pandas as pd
 import time
 
 
-def read():
+def read(file):
 
     # variable to hold log text
 
@@ -13,12 +13,6 @@ def read():
     # when a xlsx fiel is sucsessfully opened changes true
 
     opened = False
-
-    # prompts user to input file path
-    # temporarry design choice just to make sure it can run
-    # will be switched with argparse or sys.argv in later vers
-
-    file = input('enter path to xlsx file: ')
 
     # atempts to open users input file path
     # ment to fail if user inputs an invalid path
