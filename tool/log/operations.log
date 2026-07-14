@@ -278,3 +278,124 @@ None09:37:41 AM: opened file in input/input.xlsx
 6 rows failed
 --------------------------------------------
 07:58:04 AM: sucseffully inserted data from xlsx to output/db.db
+--------------------------------------------2026-07-14--------------------------------------------
+10:26:01 AM: opened file in input/input.xlsx
+10:26:11 AM: created new database file in output/out.db
+10:26:11 AM: sucseffully created database in output/out.db
+--------------------------------------------
+10:26:11 AM
+2 rows prossessed sucseffully
+6 rows failed
+--------------------------------------------
+10:26:11 AM: sucseffully inserted data from xlsx to output/out.db
+--------------------------------------------2026-07-14--------------------------------------------
+10:27:02 AM: opened file in input/input.xlsx
+10:27:02 AM: opened output/invalid.db
+10:27:10 AM: required db schema not found in output/invalid.db, asking user for permision to create schema
+10:27:10 AM: sucseffully added database schema in output/invalid.db
+--------------------------------------------
+10:27:10 AM
+2 rows prossessed sucseffully
+6 rows failed
+--------------------------------------------
+10:27:10 AM: sucseffully inserted data from xlsx to output/invalid.db
+--------------------------------------------2026-07-14--------------------------------------------
+10:29:42 AM: opened file in input/input.xlsx
+10:29:42 AM: opened output/empty.db
+10:29:44 AM: required db schema not found in output/empty.db, asking user for permision to create schema
+10:29:44 AM: sucseffully added database schema in output/empty.db
+--------------------------------------------
+10:30:16 AM
+2 rows prossessed sucseffully
+6 rows failed
+--------------------------------------------
+10:30:16 AM: sucseffully inserted data from xlsx to output/empty.db
+--------------------------------------------2026-07-14--------------------------------------------
+10:36:24 AM: opened file in input/input.xlsx
+10:36:25 AM: created new database file in output/empty.db
+10:36:25 AM: sucseffully created database in output/empty.db
+--------------------------------------------
+10:36:25 AM
+2 rows prossessed sucseffully
+6 rows failed
+--------------------------------------------
+10:36:25 AM: sucseffully inserted data from xlsx to output/empty.db
+--------------------------------------------2026-07-14--------------------------------------------
+10:48:43 AM: opened file in input/input.xlsx
+10:48:43 AM: opened output/empty.db
+--------------------------------------------
+10:48:43 AM
+2 rows prossessed sucseffully
+6 rows failed
+--------------------------------------------
+10:48:43 AM: sucseffully inserted data from xlsx to output/empty.db
+--------------------------------------------2026-07-14--------------------------------------------
+10:49:23 AM: opened file in input/input.xlsx
+10:49:26 AM: created new database file in output/empty.db
+10:49:26 AM: sucseffully created database in output/empty.db
+--------------------------------------------
+10:49:26 AM
+2 rows prossessed sucseffully
+6 rows failed
+--------------------------------------------
+10:49:26 AM: sucseffully inserted data from xlsx to output/empty.db
+--------------------------------------------2026-07-14--------------------------------------------
+10:56:01 AM: opened file in input/input.xlsx
+10:56:01 AM: opened output/out.db
+--------------------------------------------
+10:56:01 AM
+2 rows prossessed sucseffully
+6 rows failed
+--------------------------------------------
+10:56:01 AM: sucseffully inserted data from xlsx to output/out.db
+--------------------------------------------2026-07-14--------------------------------------------
+10:56:29 AM: opened file in input/input.xlsx
+10:56:31 AM: created new database file in output/out.db
+10:56:31 AM: sucseffully created database in output/out.db
+--------------------------------------------
+10:56:31 AM
+2 rows prossessed sucseffully
+6 rows failed
+--------------------------------------------
+10:56:31 AM: sucseffully inserted data from xlsx to output/out.db
+--------------------------------------------2026-07-14--------------------------------------------
+10:56:49 AM: opened file in input/input.xlsx
+10:56:49 AM: opened output/empty.db
+--------------------------------------------
+10:56:49 AM
+2 rows prossessed sucseffully
+6 rows failed
+--------------------------------------------
+10:56:49 AM: sucseffully inserted data from xlsx to output/empty.db
+--------------------------------------------2026-07-14--------------------------------------------
+10:57:16 AM: opened file in input/input.xlsx
+10:57:16 AM: opened output/wrong.db
+10:57:17 AM: required db schema not found in output/wrong.db, asking user for permision to create schema
+10:57:17 AM: sucseffully added database schema in output/wrong.db
+--------------------------------------------
+10:57:17 AM
+2 rows prossessed sucseffully
+6 rows failed
+--------------------------------------------
+10:57:17 AM: sucseffully inserted data from xlsx to output/wrong.db
+--------------------------------------------2026-07-14--------------------------------------------
+10:57:43 AM: opened file in input/input.xlsx
+10:57:58 AM: created new database file in output/empt.db
+10:57:58 AM: sucseffully created database in output/empt.db
+--------------------------------------------
+10:57:58 AM
+2 rows prossessed sucseffully
+6 rows failed
+--------------------------------------------
+10:57:58 AM: sucseffully inserted data from xlsx to output/empt.db
+--------------------------------------------2026-07-14--------------------------------------------
+10:58:46 AM: opened file in input/input.xlsx
+10:58:46 AM: opened output/empt.db
+10:58:48 AM: required db schema not found in output/empt.db, asking user for permision to create schema
+10:58:48 AM: sucseffully added database schema in output/empt.db
+--------------------------------------------
+10:58:49 AM
+2 rows prossessed sucseffully
+6 rows failed
+--------------------------------------------
+10:58:49 AM: sucseffully inserted data from xlsx to output/empt.db

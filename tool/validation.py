@@ -21,6 +21,7 @@ def validate(file_path, data):
     while (db_open is False):
         
         # trys to open file in file path
+        
 
         try:
 
@@ -35,43 +36,86 @@ def validate(file_path, data):
 
             db = database.cursor()
             
+            # checks selected db file's schema to check if it matches
+
+            db.execute('SELECT employee_ID FROM employee_sales')   
+            db.execute('SELECT employee_name FROM employee_sales')
+            db.execute('SELECT employee_email FROM employee_sales')
+            db.execute('SELECT department FROM employee_sales')
+            db.execute('SELECT sales FROM employee_sales')
+                       
+
+            # if not, sets variable in order to have specail error mesage propting 
+            # user to re-enter or posibly injecting new table into db  
+
             # sets db_open to true to end loop
 
             db_open = True
 
         except:
+            
+            
+            try: 
+            
+                database = sq.connect(f"file:{file_path}?mode=rw", uri=True)
 
-            # if opening fails asks user if they want to create file
 
-            if input('there is no file in this location '
-                     'do you want to create one?[Y/N]: ').lower() == 'y':
-
-                # creates file
-
-                f'{time.strftime("%I:%M:%S %p")}: created ' \
-                    f'new database file in {file_path}\n'
-
-                # creates db from input file path
+                if input ("there is a db here but the schema required dose not exist, do you want to add it? [Y/N] ") .lower() == 'y':
                 
-                database = sq.connect(file_path)
+                    log = log + f'{time.strftime("%I:%M:%S %p")}: required db ' \
+                                f'schema not found in {file_path}, asking user for permision to create schema\n'
 
-                # initiates coursor as db
+                    db = database.cursor()
 
-                db = database.cursor()
+                    log = log + f'{time.strftime("%I:%M:%S %p")}: sucseffully ' \
+                                f'added database schema in {file_path}\n'
 
-                # executes SQL here to create the data tables
+                    # creates table in db
 
-                # im sure that theres a way to create
-                # the table depending on the contents
-                # of the xlsx file but for the puroposes
-                # of the asignment ill just hard code it
+                    db.execute(
+                                """ CREATE TABLE employee_sales (
+                                employee_ID int PRIMARY KEY NOT NULL,
+                                employee_name text NOT NULL,
+                                employee_email text NOT NULL,
+                                department text,
+                                sales real)""")
+
+                    # sets db to true
+
+                    db_open = True
+                    break
+
+            except:
+
+                if input('there is no valid file in this location '
+                      'do you want to create one?[Y/N]: ').lower() == 'y':
+
+                    # creates file
+
+                    log += f'{time.strftime("%I:%M:%S %p")}: created ' \
+                       f'new database file in {file_path}\n'
+
+                    # creates db from input file path
                 
-                log = log + f'{time.strftime("%I:%M:%S %p")}: sucseffully ' \
+                    database = sq.connect(file_path)
+
+                    # initiates coursor as db
+
+                    db = database.cursor()
+
+                    # executes SQL here to create the data tables
+
+                    # im sure that theres a way to create
+                    # the table depending on the contents
+                    # of the xlsx file but for the puroposes
+                    # of the asignment ill just hard code it
+                
+                    log = log + f'{time.strftime("%I:%M:%S %p")}: sucseffully ' \
                             f'created database in {file_path}\n'
 
-                # creates table in db
+                    # creates table in db
 
-                db.execute(
+                    db.execute(
                     """ CREATE TABLE employee_sales (
                         employee_ID int PRIMARY KEY NOT NULL,
                         employee_name text NOT NULL,
@@ -79,32 +123,30 @@ def validate(file_path, data):
                         department text,
                         sales real)""")
 
-                # sets db to true
+                    # sets db to true
 
                 db_open = True
-
-            # else to reprompt user to input path
-
-            else:
+                break
+                
+        finally:
+            
+            if db_open == False:
 
                 # if user selects no in last prompt,
                 # prompts user to input path to sql file again
 
                 file_path = input('input path to database file, include file name: ')
+            
+            else: 
 
-    # executes select to grab emploee ids
+                # executes select to grab emploee ids
+    
+                db.execute("SELECT employee_ID FROM employee_sales")
 
-    db.execute("SELECT employee_ID FROM employee_sales")
 
     # stores ids in id_check
 
     id_check = [row[0] for row in db] 
-
-    #--------------------------
-    # temp to check ids stored
-    #--------------------------
-
-    print(id_check)
 
     succsess = 0
 

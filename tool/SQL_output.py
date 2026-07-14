@@ -14,6 +14,8 @@ def prossess(file_path, data):
 
     data_store = []
 
+    # oppens db file from 
+
     database = sq.connect(f"file:{file_path}?mode=rw", uri=True)
 
     db = database.cursor()
