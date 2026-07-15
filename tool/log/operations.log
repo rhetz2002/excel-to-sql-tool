@@ -399,3 +399,56 @@ None09:37:41 AM: opened file in input/input.xlsx
 6 rows failed
 --------------------------------------------
 10:58:49 AM: sucseffully inserted data from xlsx to output/empt.db
+--------------------------------------------2026-07-15--------------------------------------------
+10:37:46 AM: opened file in ../test_input/sample(14).xlsx
+10:37:47 AM: created new database file in output/test14.db
+10:37:47 AM: sucseffully created database in output/test14.db
+--------------------------------------------
+10:37:47 AM
+0 rows prossessed sucseffully
+0 rows failed
+--------------------------------------------
+10:37:47 AM: sucseffully inserted data from xlsx to output/test14.db
+--------------------------------------------2026-07-15--------------------------------------------
+10:41:19 AM: opened file in ../test_input/sample(14).xlsx
+10:41:19 AM: opened output/test12.txt
+10:41:24 AM: required db schema not found in output/test12.txt, asking user for permision to create schema
+10:41:24 AM: sucseffully added database schema in output/test12.txt
+--------------------------------------------
+10:41:24 AM
+0 rows prossessed sucseffully
+0 rows failed
+--------------------------------------------
+10:41:24 AM: sucseffully inserted data from xlsx to output/test12.txt
+--------------------------------------------2026-07-15--------------------------------------------
+10:41:56 AM: opened file in ../test_input/sample(14).xlsx
+10:41:56 AM: opened output/test12.py
+10:41:58 AM: required db schema not found in output/test12.py, asking user for permision to create schema
+10:41:58 AM: sucseffully added database schema in output/test12.py
+--------------------------------------------
+10:41:58 AM
+0 rows prossessed sucseffully
+0 rows failed
+--------------------------------------------
+10:41:58 AM: sucseffully inserted data from xlsx to output/test12.py
+--------------------------------------------2026-07-15--------------------------------------------
+10:42:21 AM: opened file in ../test_input/sample(14).xlsx
+10:42:24 AM: created new database file in output/test12.hpg
+10:42:24 AM: sucseffully created database in output/test12.hpg
+--------------------------------------------
+10:42:24 AM
+0 rows prossessed sucseffully
+0 rows failed
+--------------------------------------------
+10:42:24 AM: sucseffully inserted data from xlsx to output/test12.hpg
+--------------------------------------------2026-07-15--------------------------------------------
+10:42:32 AM: opened file in ../test_input/sample(14).xlsx
+10:42:32 AM: opened output/test12.jpg
+10:42:34 AM: required db schema not found in output/test12.jpg, asking user for permision to create schema
+10:42:34 AM: sucseffully added database schema in output/test12.jpg
+--------------------------------------------
+10:42:34 AM
+0 rows prossessed sucseffully
+0 rows failed
+--------------------------------------------
+10:42:34 AM: sucseffully inserted data from xlsx to output/test12.jpg
