@@ -4,7 +4,7 @@
 | TC-002  | Normal   | valid data with zero as input in id and sale value | sample2.xlsx (valid data including a 0 in ID and 0s in sales) | all rows passed | all rows passed even 0s | pass |
 | TC-003  | Normal   | invalid input in form of various field types | sample3.xlsx(bad data that includes wrong data types and invalid characters) | bad data should be rejected gracefully | data rejected gracefully | pass | 
 | TC-004  | Normal   | input with data missing from optional data fields | sample4.xlsx (missing data in optional fields) | optional fields should be passed as null | department fails if null but sales passes as NaN | fail | 
-| TC-005  | Edge     | output file has some fields but not all | sample5.xlsx (valid data) | should prompt user to create fields or gracefully stop | prompts user to create schema then crashes | fail | 
+| TC-005  | Edge     | output file has some fields but not all | sample5.xlsx (valid data) | should prompt user to create fields or gracefully stop | prompts user to create schema, re-prompts user for valid output location then crashes | fail | 
 | TC-006  | Edge     | input file headers but no data | sample6.xlsx (includes only headers) | should run cleanly with 0 files processed | runs just fine possessing 0 rows | pass |  
 | TC-007  | Edge     | input has text fields with abnormal characters | sample7.xlsx (includes varying amounts of special characters in string fields) | depending on characters will reject fields | all pass just fine | pass |  
 | TC-008  | Edge     | Input file has extra columns | sample9.xlsx (has an extra "profit" column) | should use the valid columns | uses valid columns but terminal output prints all columns | pass | 
