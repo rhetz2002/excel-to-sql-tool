@@ -452,3 +452,209 @@ None09:37:41 AM: opened file in input/input.xlsx
 0 rows failed
 --------------------------------------------
 10:42:34 AM: sucseffully inserted data from xlsx to output/test12.jpg
+--------------------------------------------2026-07-15--------------------------------------------
+11:13:54 AM: opened file in ../input1.xlsx
+11:13:55 AM: created new database file in ../test_output/test10.db
+11:13:55 AM: sucseffully created database in ../test_output/test10.db
+--------------------------------------------
+11:13:55 AM
+3 rows prossessed sucseffully
+5 rows failed
+--------------------------------------------
+11:13:55 AM: sucseffully inserted data from xlsx to ../test_output/test10.db
+--------------------------------------------2026-07-15--------------------------------------------
+11:15:54 AM: opened file in ../input1.xlsx
+11:15:55 AM: created new database file in ../test_output/test10.db
+11:15:55 AM: sucseffully created database in ../test_output/test10.db
+--------------------------------------------
+11:15:55 AM
+8 rows prossessed sucseffully
+0 rows failed
+--------------------------------------------
+11:15:55 AM: sucseffully inserted data from xlsx to ../test_output/test10.db
+--------------------------------------------2026-07-15--------------------------------------------
+11:27:34 AM: opened file in ../test_input/sample(10).xlsx
+11:27:35 AM: created new database file in ../test_output/test10.db
+11:27:35 AM: sucseffully created database in ../test_output/test10.db
+--------------------------------------------
+11:27:35 AM
+8 rows prossessed sucseffully
+0 rows failed
+--------------------------------------------
+11:27:35 AM: sucseffully inserted data from xlsx to ../test_output/test10.db
+--------------------------------------------2026-07-15--------------------------------------------
+11:30:20 AM: opened file in ../test_input/sample(10).xlsx
+11:30:22 AM: created new database file in ../test_output/test10.db
+11:30:22 AM: sucseffully created database in ../test_output/test10.db
+--------------------------------------------
+11:30:22 AM
+8 rows prossessed sucseffully
+0 rows failed
+--------------------------------------------
+11:30:22 AM: sucseffully inserted data from xlsx to ../test_output/test10.db
+--------------------------------------------2026-07-15--------------------------------------------
+11:30:26 AM: opened file in ../test_input/sample(10).xlsx
+11:30:26 AM: opened ../test_output/test10.db
+--------------------------------------------
+11:30:26 AM
+0 rows prossessed sucseffully
+8 rows failed
+--------------------------------------------
+11:30:26 AM: sucseffully inserted data from xlsx to ../test_output/test10.db
+--------------------------------------------2026-07-15--------------------------------------------
+11:33:17 AM: opened file in ../test_input/sample(10).xlsx
+11:33:17 AM: opened ../test_output/test10.db
+--------------------------------------------
+11:33:17 AM
+0 rows prossessed sucseffully
+8 rows failed
+--------------------------------------------
+11:33:17 AM: sucseffully inserted data from xlsx to ../test_output/test10.db
+--------------------------------------------2026-07-15--------------------------------------------
+11:35:45 AM: opened file in ../test_input/sample15.xlsx
+11:35:47 AM: created new database file in ../test_output/test15.db
+11:35:47 AM: sucseffully created database in ../test_output/test15.db
+--------------------------------------------
+11:35:47 AM
+4 rows prossessed sucseffully
+4 rows failed
+--------------------------------------------
+11:35:47 AM: sucseffully inserted data from xlsx to ../test_output/test15.db
+--------------------------------------------2026-07-15--------------------------------------------
+11:38:51 AM: opened file in ../test_input/sample9.xlsx
+11:38:52 AM: created new database file in ../test_output/test9.db
+11:38:52 AM: sucseffully created database in ../test_output/test9.db
+--------------------------------------------
+11:38:52 AM
+4 rows prossessed sucseffully
+4 rows failed
+--------------------------------------------
+11:38:52 AM: sucseffully inserted data from xlsx to ../test_output/test9.db
+--------------------------------------------2026-07-15--------------------------------------------
+11:40:17 AM: opened file in ../test_input/sample9.xlsx
+11:40:18 AM: created new database file in ../test_output/test9.db
+11:40:18 AM: sucseffully created database in ../test_output/test9.db
+--------------------------------------------
+11:40:18 AM
+8 rows prossessed sucseffully
+0 rows failed
+--------------------------------------------
+11:40:18 AM: sucseffully inserted data from xlsx to ../test_output/test9.db
+--------------------------------------------2026-07-15--------------------------------------------
+11:49:11 AM: opened file in ../test_input/sample7.xlsx
+11:49:12 AM: created new database file in ../test_output/test7.db
+11:49:12 AM: sucseffully created database in ../test_output/test7.db
+--------------------------------------------
+11:49:12 AM
+8 rows prossessed sucseffully
+0 rows failed
+--------------------------------------------
+11:49:12 AM: sucseffully inserted data from xlsx to ../test_output/test7.db
+--------------------------------------------2026-07-15--------------------------------------------
+11:53:46 AM: opened file in ../test_input/sample7.xlsx
+11:53:47 AM: created new database file in ../test_output/test7.db
+11:53:47 AM: sucseffully created database in ../test_output/test7.db
+--------------------------------------------
+11:53:47 AM
+8 rows prossessed sucseffully
+0 rows failed
+--------------------------------------------
+11:53:47 AM: sucseffully inserted data from xlsx to ../test_output/test7.db
+--------------------------------------------2026-07-15--------------------------------------------
+11:55:26 AM: opened file in ../test_input/sample6.xlsx
+11:55:27 AM: created new database file in ../test_output/test6.db
+11:55:27 AM: sucseffully created database in ../test_output/test6.db
+--------------------------------------------
+11:55:27 AM
+0 rows prossessed sucseffully
+0 rows failed
+--------------------------------------------
+11:55:27 AM: sucseffully inserted data from xlsx to ../test_output/test6.db
+--------------------------------------------2026-07-15--------------------------------------------
+11:59:09 AM: failed to open file in ../test_input/sample5.xlsx reprompting user input
+12:00:09 PM: opened file in ../test_input/sample5.xlsx
+12:00:09 PM: opened ../test_output/test5.db
+--------------------------------------------
+12:00:09 PM
+8 rows prossessed sucseffully
+0 rows failed
+--------------------------------------------
+12:00:09 PM: sucseffully inserted data from xlsx to ../test_output/test5.db
+--------------------------------------------2026-07-15--------------------------------------------
+12:14:57 PM: opened file in ../test_input/sample16.xlsx
+12:14:57 PM: opened ../test_output/test15.db
+--------------------------------------------
+12:14:57 PM
+116 rows prossessed sucseffully
+4 rows failed
+--------------------------------------------
+12:14:57 PM: sucseffully inserted data from xlsx to ../test_output/test15.db
+--------------------------------------------2026-07-15--------------------------------------------
+12:15:31 PM: opened file in ../test_input/sample15.xlsx
+12:15:31 PM: opened ../test_output/test15.db
+--------------------------------------------
+12:15:31 PM
+0 rows prossessed sucseffully
+8 rows failed
+--------------------------------------------
+12:15:31 PM: sucseffully inserted data from xlsx to ../test_output/test15.db
+--------------------------------------------2026-07-15--------------------------------------------
+12:15:35 PM: opened file in ../test_input/sample16.xlsx
+12:15:37 PM: created new database file in ../test_output/test16.db
+12:15:37 PM: sucseffully created database in ../test_output/test16.db
+--------------------------------------------
+12:15:37 PM
+120 rows prossessed sucseffully
+0 rows failed
+--------------------------------------------
+12:15:37 PM: sucseffully inserted data from xlsx to ../test_output/test16.db
+--------------------------------------------2026-07-15--------------------------------------------
+12:18:22 PM: opened file in ../test_input/sample4.xlsx
+12:18:24 PM: created new database file in ../test_output/test4.db
+12:18:24 PM: sucseffully created database in ../test_output/test4.db
+--------------------------------------------
+12:18:24 PM
+5 rows prossessed sucseffully
+3 rows failed
+--------------------------------------------
+12:18:24 PM: sucseffully inserted data from xlsx to ../test_output/test4.db
+--------------------------------------------2026-07-15--------------------------------------------
+12:20:02 PM: opened file in ../test_input/sample4.xlsx
+12:20:04 PM: created new database file in ../test_output/test4.db
+12:20:04 PM: sucseffully created database in ../test_output/test4.db
+--------------------------------------------
+12:20:04 PM
+5 rows prossessed sucseffully
+3 rows failed
+--------------------------------------------
+12:20:04 PM: sucseffully inserted data from xlsx to ../test_output/test4.db
+--------------------------------------------2026-07-15--------------------------------------------
+12:26:36 PM: opened file in ../test_input/sample1.xlsx
+12:26:37 PM: created new database file in ../test_output/test1.db
+12:26:37 PM: sucseffully created database in ../test_output/test1.db
+--------------------------------------------
+12:26:37 PM
+5 rows prossessed sucseffully
+5 rows failed
+--------------------------------------------
+12:26:37 PM: sucseffully inserted data from xlsx to ../test_output/test1.db
+--------------------------------------------2026-07-15--------------------------------------------
+12:29:01 PM: opened file in ../test_input/sample2.xlsx
+12:29:02 PM: created new database file in ../test_output/test2.db
+12:29:02 PM: sucseffully created database in ../test_output/test2.db
+--------------------------------------------
+12:29:02 PM
+10 rows prossessed sucseffully
+0 rows failed
+--------------------------------------------
+12:29:02 PM: sucseffully inserted data from xlsx to ../test_output/test2.db
+--------------------------------------------2026-07-15--------------------------------------------
+12:32:09 PM: opened file in ../test_input/input1.xlsx
+12:32:10 PM: created new database file in ../test_output/test3.db
+12:32:10 PM: sucseffully created database in ../test_output/test3.db
+--------------------------------------------
+12:32:10 PM
+5 rows prossessed sucseffully
+6 rows failed
+--------------------------------------------
+12:32:10 PM: sucseffully inserted data from xlsx to ../test_output/test3.db
