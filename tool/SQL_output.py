@@ -42,7 +42,7 @@ def prossess(file_path, data):
                     INSERT INTO employee_sales
                     (employee_ID, employee_name, employee_email, department, sales)
                     VALUES (?, ?, ?, ?, ?)""",
-                    (data_store[0], data_store[1], data_store[2], data_store[3], data_store[4]))
+                    (int(data_store[0]), data_store[1], data_store[2], data_store[3], data_store[4]))
 
         # resets data_store
 
