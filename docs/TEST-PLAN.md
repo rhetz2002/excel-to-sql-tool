@@ -1,16 +1,17 @@
 | Test ID | Category | Description | Input | Expected Output | Actual Output | Pass/Fail |
 |---------|----------|-------------|-------|-----------------|---------------|-----------|
-| TC-001  | Normal   | mixed batch of valid and invalid data | sample(1).xlsx (5 valid 5 invalid) | 5 rows inserted, 5 rows rejected | ... | ... |
-| TC-002  | Normal   | valid data with zero as input in id and sale value | sample(2).xlsx | all rows passed | ... | ... |
-| TC-003  | Normal   | invalid input in form of various field types | sample(3).xlsx | bad data should be rejected gracefully  | ... | ... |
-| TC-004  | Normal   | input with data missing from optional data fields | sample(4).xlsx | optional fields should be passed as null | ... | ... |
-| TC-005  | Edge     | output file has some fields but not all | sample(5).xlsx | should prompt user to create fields or gracefully stop | ... | ... | 
-| TC-006  | Edge     | input file headers but no data | sample(6).xlsx | should run cleanly with 0 files processed | ... | ... | 
-| TC-007  | Edge     | input has text fields with abnormal characters | sample(7).xlsx | depending on characters will reject fields | ... | ... | 
-| TC-008  | Edge     | Input file has extra columns | sample(8).xlsx | should use the valid columns | ... |sample(9) ... |
-| TC-008  | Edge     | input file has duplicate id but has updated data | sample(10).xlsx | should append to file | ... | ... |
-| TC-009  | Error    | invalid input file type | sample(11).xlsx | should gracefully reject input or re-prompt for user input | ... | ... |
-| TC-010  | Error    | invalid output file type | sample(12).xlsx | should gracefully reject output or re-prompt for user input | this one had me facinated, for a bit i was starting to think that it didnt cade about extension which is partly right, it only cares about the data in a file. if the data in the file is improperly formatted it will ask to create the schema, the failes if you slecet yes, it will reprompt the user to input a new file location, if the user tries to input the same file it crashes. otherwise an empty .jpg file is as valid as anything else to the program | ... |
-| TC-011  | Error    | Nonexistent file path for log file | sample(13).xlsx | should create path | processess files but crashes on the creation of log file | fail |
-| TC-012  | Error    | Headers non existent in input file | sample(14).xlsx| should gracefully stop with user error | procsesses data with 0 input | pass |
-  
+| TC-001  | Normal   | mixed batch of valid and invalid data | sample1.xlsx (5 valid 5 invalid) | 5 rows inserted, 5 rows rejected | valid passes invalid rejected | pass |
+| TC-002  | Normal   | valid data with zero as input in id and sale value | sample2.xlsx (valid data including a 0 in ID and 0s in sales) | all rows passed | all rows passed even 0s | pass |
+| TC-003  | Normal   | invalid input in form of various field types | sample3.xlsx(bad data that includes wrong data types and invalid characters) | bad data should be rejected gracefully | data rejected gracefully | pass | 
+| TC-004  | Normal   | input with data missing from optional data fields | sample4.xlsx (missing data in optional fields) | optional fields should be passed as null | department fails if null but sales passes as NaN | fail | 
+| TC-005  | Edge     | output file has some fields but not all | sample5.xlsx (valid data) | should prompt user to create fields or gracefully stop | prompts user to create schema then crashes | fail | 
+| TC-006  | Edge     | input file headers but no data | sample6.xlsx (includes only headers) | should run cleanly with 0 files processed | runs just fine possessing 0 rows | pass |  
+| TC-007  | Edge     | input has text fields with abnormal characters | sample7.xlsx (includes varying amounts of special characters in string fields) | depending on characters will reject fields | all pass just fine | pass |  
+| TC-008  | Edge     | Input file has extra columns | sample9.xlsx (has an extra "profit" column) | should use the valid columns | uses valid columns but terminal output prints all columns | pass | 
+| TC-008  | Edge     | input file has duplicate id but has updated data | sample10.xlsx (normal data, has different data from output file test10.db)| should append to file | fails all duplicate IDs | fail | 
+| TC-009  | Error    | invalid input file type | sample11.webp (image file)| should gracefully reject input or re-prompt for user input | re-prompts the user for input file and crashes if the re-prompt is invalid | fail | 
+| TC-010  | Error    | invalid output file type | sample14.xlsx (has no data) | should gracefully reject output or re-prompt for user input | slight tangent, this one had me fascinated. For a bit, I was starting to think that it didn't matter what the extension was. I partly right as it only cares about the data in a file. If the data in the file is improperly formatted (which is my guess on what causes this) it will ask to create the schema, failing to do so if you select yes. It will then re-prompt the user to input a new file location. If the user tries to input the same file, it crashes. otherwise, an empty .jpg file is as valid as anything else to the program | fail | 
+| TC-011  | Error    | Nonexistent file path for log file | sample14.xlsx (has no data) | should create path | processes files but crashes on the creation of log file | fail | 
+| TC-012  | Error    | Headers nonexistent in input file | sample14.xlsx (has no data) | should gracefully stop with user error | processes data with 0 input | pass | 
+| TC-013  | Edge     | input file has white space in the department field | sample15.xlsx (has white space after some of the department entries) | should ignore whitespace and accept row  | skips row | fail | 
+| TC-014  | Normal   | 100 rows of mixed data | sample16.xlsx (over 100 rows of valid data) | over 100 rows inserted | over 100 rows inserted | pass |
