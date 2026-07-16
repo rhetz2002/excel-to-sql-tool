@@ -1,12 +1,17 @@
 # imports required packages and conects to
 # external files adding core functions
-
+from pathlib import Path
 import argparse as arg
 from excell_open import read
 from SQL_output import prossess
 from validation import validate
 import sqlite3 as sq
 import time
+
+
+
+
+
 
 # initates var data_log to store operations log
 # which will be exported to external log file
@@ -60,23 +65,43 @@ data_log = data_log + str(log)
 
 print('sucsess')
 
-# trys to open using x for exclusive creation, will fail if alredy exsists
+# trys to open using a for exclusive creation, will fail if alredy exsists
 
 try:
-    operations = open('log/operations.log', 'x')
-
-    operations.write(data_log)
-
-    operations.close
-
-# if alredy exsists openes with a for append
-
-except:
+    
     operations = open('log/operations.log', 'a')
 
     operations.write(data_log)
 
-    operations.close()
+    operations.close
+    
+except:
+    
+    absolute = Path('main.py').resolve()
+
+    path_log = str(absolute).removesuffix('main.py') 
+
+    path_log = Path(path_log + ('log/'))
+
+    path_log.mkdir(parents=True, exist_ok=True)
+
+    operations = open(f'{path_log}/operations.log', 'w')
+
+    operations.write(data_log)
+
+    operations.close
+         
+
+
+
+
+   # config(open(input()
+
+  #  operations = open('log/operations.log', 'a')
+#
+  #  operations.write(data_log)
+
+  #  operations.close()
 
 # after opening writes data_log into operations.log
 

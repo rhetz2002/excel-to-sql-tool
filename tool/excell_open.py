@@ -34,7 +34,7 @@ def read(file):
 
         # check wether that opened is flase or true leaves loop if true
 
-        while opened is False:
+        while not opened:
 
             # adds that user failed to open file to log
 
