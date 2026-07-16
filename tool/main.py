@@ -90,18 +90,4 @@ except:
     operations.write(data_log)
 
     operations.close
-         
-
-
-
-
-   # config(open(input()
-
-  #  operations = open('log/operations.log', 'a')
-#
-  #  operations.write(data_log)
-
-  #  operations.close()
-
-# after opening writes data_log into operations.log
 
