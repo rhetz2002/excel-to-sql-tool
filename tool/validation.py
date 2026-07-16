@@ -60,7 +60,7 @@ def validate(file_path, data):
                 database = sq.connect(f"file:{file_path}?mode=rw", uri=True)
 
 
-                if input ("there is a db here but the schema required dose not exist, do you want to add it? [Y/N] ") .lower() == 'y':
+                if input ("there is a db here but the schema required dose not exist, do you want to add it? [Y/N] ").lower() == 'y':
                 
                     log = log + f'{time.strftime("%I:%M:%S %p")}: required db ' \
                                 f'schema not found in {file_path}, asking user for permision to create schema\n'
@@ -162,7 +162,7 @@ def validate(file_path, data):
     # used to check if a row is bad and which section of 
     # of the row is bad
     check = 0
-
+    print (data)
     for index, row in data.iterrows():
 
             # thuroughly checks to see if its missing any
@@ -206,7 +206,7 @@ def validate(file_path, data):
 
                                 # checks that department has a valid string
 
-                                if str(row['department']) in ['sales', 'customer service']:
+                                if pd.isna(row['department']) or str(row['department']).strip().lower() in ['sales', 'customer service', '']:
                             
                                     # adds one to succsess to keep track of valid rows
                             
