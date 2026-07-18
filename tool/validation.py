@@ -187,48 +187,50 @@ def validate(file_path, data):
                         
                         try: 
 
-                            # checks that ID colomn is an intiger
+                            # checks that sales colounm is float
 
-                            if int(row['ID']) not in id_check:
-
-                                
-                                try:
-
-                                    # checks that sales colounm is float
-
-                                    float(row['sales'])
+                            float(row['sales'])
                         
-                                except: 
+                        except: 
 
-                                    # if it is not a float sets check to six to set the error
+                            # if it is not a float sets check to six to set the error
 
-                                    check = 6    
+                            check = 6    
 
-                                # checks that department has a valid string
+                        # checks that department has a valid string
 
-                                if pd.isna(row['department']) or str(row['department']).strip().lower() in ['sales', 'customer service', '']:
-                            
+                        if pd.isna(row['department']) or str(row['department']).strip().lower() in ['sales', 'customer service', '']:
+
+
+                            try:
+
+                                # checks that ID colomn is an intiger
+
+                                if int(row['ID']) not in id_check:
+                                
                                     # adds one to succsess to keep track of valid rows
                             
-                                    succsess = succsess + 1
+                                    succsess = succsess + 1                                
 
                                 else:
-                            
-                                    # if it is not valid sets check to eight to set the error
-                            
-                                    check = 8
 
-                            else:
+                                    # if it is alredy in the db sets check to four to set the error
 
-                                # if it is alredy in the db sets check to four to set the error
+                                    check = 4 
+
+                            except:
+
+                                # if it is not an intiger sets check to four to set the error
 
                                 check = 4
 
-                        except:
-
-                            # if it is not an intiger sets check to four to set the error
-
-                            check = 4
+                        else:
+                            
+                            # if it is not valid sets check to eight to set the error
+                            
+                            check = 8
+                
+                        
 
                     else:
 
@@ -255,12 +257,12 @@ def validate(file_path, data):
             # checks if line is bad and which line is bad using 
             # the check variable                    
 
-            if check == 0:
+            if check == 0 or check == 5:
                 
                 # if no errors
                 # adds one to sucsess to keep track of number good lines
                 
-                print(f"row {index} sucsess")
+                print(f"row {index} sucsess") 
 
             else: 
 
@@ -320,7 +322,7 @@ def validate(file_path, data):
 
     # stores passing data in clean
     # while removing bad rows
-    
+
     clean = data.drop(bad_rows, axis=0)
 
     # adds passing and failing lines to log
@@ -330,6 +332,9 @@ def validate(file_path, data):
     log = log + f'{succsess} rows prossessed sucseffully\n'
     log = log + f'{fail} rows failed\n'
     log = log + '--------------------------------------------\n'
+    
+    database.commit()
+    database.close()
 
     # returns clean
     return clean, log
