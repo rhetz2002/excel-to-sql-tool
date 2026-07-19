@@ -6,6 +6,8 @@ import sqlite3 as sq
 # defines vaildate function
 def validate(file_path, data):
 
+    filepath = file_path   
+
     log = ''
 
     # for while loop
@@ -30,9 +32,9 @@ def validate(file_path, data):
             # as a measure to make sure the user knows that
             # its not typed in correctly, opens if alredy exsists
             
-            database = sq.connect(f"file:{file_path}?mode=rw", uri=True)
+            database = sq.connect(f"file:{filepath}?mode=rw", uri=True)
 
-            log = log + f'{time.strftime("%I:%M:%S %p")}: opened {file_path}\n'
+            log = log + f'{time.strftime("%I:%M:%S %p")}: opened {filepath}\n'
 
             db = database.cursor()
             
@@ -57,18 +59,18 @@ def validate(file_path, data):
             
             try: 
             
-                database = sq.connect(f"file:{file_path}?mode=rw", uri=True)
+                database = sq.connect(f"file:{filepath}?mode=rw", uri=True)
 
 
                 if input ("there is a db here but the schema required dose not exist, do you want to add it? [Y/N] ").lower() == 'y':
                 
                     log = log + f'{time.strftime("%I:%M:%S %p")}: required db ' \
-                                f'schema not found in {file_path}, asking user for permision to create schema\n'
+                                f'schema not found in {filepath}, asking user for permision to create schema\n'
 
                     db = database.cursor()
 
                     log = log + f'{time.strftime("%I:%M:%S %p")}: sucseffully ' \
-                                f'added database schema in {file_path}\n'
+                                f'added database schema in {filepath}\n'
 
                     # creates table in db
 
@@ -83,7 +85,7 @@ def validate(file_path, data):
                     # sets db to true
 
                     db_open = True
-                    break
+                    
 
             except:
 
@@ -93,11 +95,11 @@ def validate(file_path, data):
                     # creates file
 
                     log += f'{time.strftime("%I:%M:%S %p")}: created ' \
-                       f'new database file in {file_path}\n'
+                       f'new database file in {filepath}\n'
 
                     # creates db from input file path
                 
-                    database = sq.connect(file_path)
+                    database = sq.connect(filepath)
 
                     # initiates coursor as db
 
@@ -111,7 +113,7 @@ def validate(file_path, data):
                     # of the asignment ill just hard code it
                 
                     log = log + f'{time.strftime("%I:%M:%S %p")}: sucseffully ' \
-                            f'created database in {file_path}\n'
+                            f'created database in {filepath}\n'
 
                     # creates table in db
 
@@ -125,17 +127,17 @@ def validate(file_path, data):
 
                     # sets db to true
 
-                db_open = True
-                break
+                    db_open = True
+                
                 
         finally:
             
-            if db_open == False:
+            if not db_open:
 
                 # if user selects no in last prompt,
                 # prompts user to input path to sql file again
 
-                file_path = input('input path to database file, include file name: ')
+                filepath = input('input path to database file, include file name: ')
             
             else: 
 
@@ -143,10 +145,14 @@ def validate(file_path, data):
     
                 db.execute("SELECT employee_ID FROM employee_sales")
 
+    
 
     # stores ids in id_check
 
     id_check = [row[0] for row in db] 
+    
+    database.commit()
+    database.close()
 
     succsess = 0
 
@@ -333,8 +339,7 @@ def validate(file_path, data):
     log = log + f'{fail} rows failed\n'
     log = log + '--------------------------------------------\n'
     
-    database.commit()
-    database.close()
+    
 
     # returns clean
-    return clean, log
+    return clean, log, filepath

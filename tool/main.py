@@ -8,11 +8,6 @@ from validation import validate
 import sqlite3 as sq
 import time
 
-
-
-
-
-
 # initates var data_log to store operations log
 # which will be exported to external log file
 
@@ -45,7 +40,7 @@ data_log = data_log + log
 # clean_data and log. clean data is verified data free
 # of known errors. log is log file data
 
-clean_data, log = validate(args.output, data)
+clean_data, log, output = validate(args.output, data)
 
 print (clean_data)
 # like line 21 appeneds log data to data_log
@@ -55,7 +50,7 @@ data_log = data_log + log
 # runs clean_data through process function to insert into sql database
 # retreives final log data in log variable
 
-log = prossess(args.output, clean_data)
+log = prossess(output, clean_data)
 
 # appeneds log data to data_log
 
@@ -65,7 +60,7 @@ data_log = data_log + str(log)
 
 print('sucsess')
 
-# trys to open using a for exclusive creation, will fail if alredy exsists
+# trys to open using a for for append, will fail if alredy exsists
 
 try:
     
@@ -74,16 +69,25 @@ try:
     operations.write(data_log)
 
     operations.close
-    
+
+# if none exsists tool will grab absolute path from main.py
 except:
     
     absolute = Path('main.py').resolve()
 
+    # turns the path into a string to remove main.py from path
+
     path_log = str(absolute).removesuffix('main.py') 
 
-    path_log = Path(path_log + ('log/'))
+    # adds 'log' to the path and turns it back into a path that can be passed through 'mkdir'
+
+    path_log = Path(path_log + ('log'))
+
+    # runs mkdir on path_log to create the folder
 
     path_log.mkdir(parents=True, exist_ok=True)
+
+    # opens the log file with w to create the file, passes 'path_log through open alongside operations.log to compleet the file path 
 
     operations = open(f'{path_log}/operations.log', 'w')
 
