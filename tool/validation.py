@@ -6,8 +6,6 @@ import sqlite3 as sq
 # defines vaildate function
 def validate(filepath, data):
 
-    #filepath = file_path   
-
     log = ''
 
     # for while loop
