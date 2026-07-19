@@ -4,9 +4,9 @@ import sqlite3 as sq
 
 
 # defines vaildate function
-def validate(file_path, data):
+def validate(filepath, data):
 
-    filepath = file_path   
+    #filepath = file_path   
 
     log = ''
 
