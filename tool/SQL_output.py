@@ -14,13 +14,13 @@ def process(file_path, data):
 
     data_store = []
 
-    # oppens db file from 
+    # opens db file from user input given in main 
 
     database = sq.connect(f"file:{file_path}?mode=rw", uri=True)
 
     db = database.cursor()
 
-    # iterates over the data in data
+    # iterates over the data in data var
 
     for index, row in data.iterrows():
 
@@ -36,7 +36,7 @@ def process(file_path, data):
 
         data_store.append(float(data.at[index, 'sales']))
 
-        # executes SQL adding the data_store data into the SQL
+        # executes SQL adding the data_store data into the db
 
         db.execute("""
                     INSERT INTO employee_sales
@@ -48,8 +48,8 @@ def process(file_path, data):
 
         data_store = []
 
-    log = log + f'{time.strftime("%I:%M:%S %p")}: sucseffully ' \
-                        f'inserted data from xlsx to {file_path}\n'
+    log = log + f'{time.strftime("%I:%M:%S %p")}: successfully ' \
+                f'inserted data from .xlsx to {file_path}\n' 
 
     # commits and closes database
 
