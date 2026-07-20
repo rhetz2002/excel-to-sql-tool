@@ -44,7 +44,7 @@ def process(file_path, data):
                     VALUES (?, ?, ?, ?, ?)""",
                     (int(data_store[0]), data_store[1], data_store[2], data_store[3], data_store[4]))
 
-        # resets data_store
+        # resets data_store to ready for next loop
 
         data_store = []
 
