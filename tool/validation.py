@@ -68,6 +68,8 @@ def validate(filepath, data):
                     db = database.cursor()
                 
                     # creates table in db
+                    
+                    log += 'atempting to create new table in exsisting db file'
 
                     db.execute(
                                 """ CREATE TABLE IF NOT EXISTS employee_sales (
@@ -76,9 +78,67 @@ def validate(filepath, data):
                                 employee_email text NOT NULL,
                                 department text,
                                 sales real)""")
+                    database.commit()
                     
-                     log = log + f'{time.strftime("%I:%M:%S %p")}: sucseffully ' \
-                                 f'added database schema in {filepath}\n'
+                    db.execute("PRAGMA table_info(employee_sales)")
+                    column_name = [column[1] for column in db.fetchall()]
+
+
+                    if 'employee_name' not in column_name:
+
+                        try:
+                            
+                            db.execute('ALTER TABLE employee_sales ADD employee_name text NOT NULL')
+
+                            database.commit()
+                        
+                        except:
+                            
+                            log += 'appending to exsisting schema: failed to create employee_name'
+
+                    if 'employee_email' not in column_name:
+
+                        try:
+                            
+                            db.execute('ALTER TABLE employee_sales ADD employee_email text NOT NULL')
+
+                            database.commit()
+                        
+                        except:
+                            
+                            log += 'appending to exsisting schema: failed to create employee_email'
+
+                    if 'department' not in column_name:
+
+                        try:
+                            
+                            db.execute('ALTER TABLE employee_sales ADD department text')
+
+                            database.commit()
+                        
+                        except:
+                            
+                            log += 'appending to exsisting schema: failed to create department'
+
+                    if 'sales' not in column_name:
+                        
+                        try:
+                            
+                            db.execute('ALTER TABLE employee_sales ADD sales real')
+
+                            database.commit()
+                        
+                        except:
+                            
+                            log += 'appending to exsisting schema: failed to create sales'
+                    
+                             
+                    print (column_name)
+
+
+
+                    log = log + f'{time.strftime("%I:%M:%S %p")}: sucseffully ' \
+                                f'added database schema in {filepath}\n'
                     
                     # sets db to true
 
@@ -138,7 +198,7 @@ def validate(filepath, data):
                 filepath = input('input path to database file, include file name: ')
             
             else: 
-
+                    
                 # executes select to grab emploee ids
     
                 db.execute("SELECT employee_ID FROM employee_sales")
@@ -149,8 +209,10 @@ def validate(filepath, data):
 
     id_check = [row[0] for row in db] 
     
-    database.commit()
-    database.close()
+    db.execute("PRAGMA table_info(employee_sales)")
+    column_names = [column[1] for column in db.fetchall()]
+    print (column_names)
+    
 
     succsess = 0
 
@@ -165,9 +227,11 @@ def validate(filepath, data):
 
     # used to check if a row is bad and which section of 
     # of the row is bad
-    check = 0
+    
     print (data)
     for index, row in data.iterrows():
+
+            check = 0
 
             # thuroughly checks to see if its missing any
             # important data or formated incorectly
@@ -207,7 +271,8 @@ def validate(filepath, data):
 
 
                             try:
-
+                                
+                                
                                 # checks that ID colomn is an intiger
 
                                 if int(row['ID']) not in id_check:
@@ -215,13 +280,11 @@ def validate(filepath, data):
                                     # adds one to succsess to keep track of valid rows
                             
                                     succsess = succsess + 1                                
-
+                                
                                 else:
-
-                                    # if it is alredy in the db sets check to four to set the error
-
-                                    check = 4 
-
+                                    
+                                    check = 4
+                                
                             except:
 
                                 # if it is not an intiger sets check to four to set the error
@@ -261,7 +324,7 @@ def validate(filepath, data):
             # checks if line is bad and which line is bad using 
             # the check variable                    
 
-            if check == 0 or check == 5:
+            if check == 0:
                 
                 # if no errors
                 # adds one to sucsess to keep track of number good lines
@@ -282,7 +345,7 @@ def validate(filepath, data):
                 
                 # resets check variable
                 
-                check = 0
+                
 
             # uses check to see what part of line failed to insert into
             
@@ -316,6 +379,7 @@ def validate(filepath, data):
                             f'fail on department check, pleas check that ' \
                             f'feild contains vaild department\n'
 
+
     # prints pass fail mesage to terminal
 
     print(f"{succsess} rows prossessed sucseffully")
@@ -338,6 +402,7 @@ def validate(filepath, data):
     log = log + '--------------------------------------------\n'
     
     
-
+    database.commit()
+    database.close()
     # returns clean
     return clean, log, filepath
