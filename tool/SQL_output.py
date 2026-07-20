@@ -4,7 +4,7 @@ import time
 # defines output function
 
 
-def prossess(file_path, data):
+def process(file_path, data):
 
     # initiates log variable
 
