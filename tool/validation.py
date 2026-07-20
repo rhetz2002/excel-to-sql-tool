@@ -66,20 +66,20 @@ def validate(filepath, data):
                                 f'schema not found in {filepath}, asking user for permision to create schema\n'
 
                     db = database.cursor()
-
-                    log = log + f'{time.strftime("%I:%M:%S %p")}: sucseffully ' \
-                                f'added database schema in {filepath}\n'
-
+                
                     # creates table in db
 
                     db.execute(
-                                """ CREATE TABLE employee_sales (
+                                """ CREATE TABLE IF NOT EXISTS employee_sales (
                                 employee_ID int PRIMARY KEY NOT NULL,
                                 employee_name text NOT NULL,
                                 employee_email text NOT NULL,
                                 department text,
                                 sales real)""")
-
+                    
+                     log = log + f'{time.strftime("%I:%M:%S %p")}: sucseffully ' \
+                                 f'added database schema in {filepath}\n'
+                    
                     # sets db to true
 
                     db_open = True
