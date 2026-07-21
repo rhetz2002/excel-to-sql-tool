@@ -1,9 +1,10 @@
 # imports required packages and connects to
 # external files adding core functions
+from SQLcheck import SQL_check
 from pathlib import Path
 import argparse as arg
 from excel_open import read
-from SQL_output import process
+from SQLoutput import process
 from validation import validate
 import sqlite3 as sq
 import time
@@ -34,6 +35,12 @@ data, log = read(args.input)
 
 data_log += log 
 
+log, output = SQL_check(args.output)
+
+# like line 21 appends log data to data_log
+
+data_log += log
+
 # passes data variable through validate function from
 # validation.py retrieving output data in tuple form 
 # clean_data and log. clean data is verified data free
@@ -41,9 +48,9 @@ data_log += log
 # also passes args.output through in case of change to
 # the output file path from re-prompt
 
-clean_data, log, output = validate(args.output, data)
+clean_data, log = validate(output, data)
 
-# like line 21 appends log data to data_log 
+# appends log data to data_log 
 
 data_log += log
 
