@@ -14,7 +14,7 @@ import time
 
 data_log = f'--------------------------------------------{time.strftime("%Y-%m-%d")}--------------------------------------------\n'
 
-# initializes the CL input, initallising user_input 
+# initializes the CL input, initializing user_input  
 # and the variables input and output, and finally
 # args = user_input.parse_args with args being
 # the variable to manipulate the user inputs
@@ -35,6 +35,9 @@ data, log = read(args.input)
 
 data_log += log 
 
+# passes args.output trough SQL_check in order to check that the output 
+# location is valid, returns args.output as output variable in case it changes
+
 log, output = SQL_check(args.output)
 
 # like line 21 appends log data to data_log
@@ -45,8 +48,6 @@ data_log += log
 # validation.py retrieving output data in tuple form 
 # clean_data and log. clean data is verified data free
 # of known errors. log is log file data
-# also passes args.output through in case of change to
-# the output file path from re-prompt
 
 clean_data, log = validate(output, data)
 

@@ -3,6 +3,7 @@ import pandas as pd
 import time
 
 
+
 def read(file):
 
     # variable to hold log text

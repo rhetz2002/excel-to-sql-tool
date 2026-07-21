@@ -20,11 +20,11 @@ def validate(filepath, data):
 
     name_check = [row[0].strip() for row in db]
 
-    succsess = 0
+    success = 0
 
     fail = 0
 
-    # iterates through the data taken from excell file
+    # iterates through the data taken from excel file
     # loops for the index and row
     omit_rows = []
 
@@ -34,34 +34,34 @@ def validate(filepath, data):
     # used to check if a row is bad and which section of 
     # of the row is bad
     
-    print (data)
+
     for index, row in data.iterrows():
         
         check = 0
 
-        # thuroughly checks to see if its missing any
-        # important data or formated incorectly
+        # thoroughly checks to see if its missing any
+        # important data or formatted incorrectly
             
-        # checks if ID collomn is not empty
+        # checks if ID column is not empty
         # if it is not valid sets check to one to set the error
 
         if pd.notna(row['ID']):
             
-            # checks if name collomn is not empty, dose not contain a digit, 
-            # is longer than 2 charicters long, and has a space
+            # checks if name column is not empty, dose not contain a digit, 
+            # is longer than 2 characters long, and has a space
             # if it is not valid sets check to two to set the error
 
             if pd.notna(row['name']) and not any(char.isdigit() for char in str(row['name'])) and len(str(row['name'])) >= 3 and ' ' in str(row['name']):
 
-                # checks if email collomn is not empty, contains an @ symbol as well as .com, 
-                # and is longer than nine charicters
+                # checks if email column is not empty, contains an @ symbol as well as .com, 
+                # and is longer than nine characters
                 # if it is not valid sets check to three to set the error
 
                 if pd.notna(row['email']) and '@' in str(row['email']) and '.com' in str(row['email']) and len(str(row['email'])) >= 9:
                         
                     try: 
 
-                        # checks that sales colounm is float
+                        # checks that sales column is float
 
                         float(row['sales'])
                         
@@ -79,13 +79,13 @@ def validate(filepath, data):
                         try:
                                 
                                 
-                            # checks that ID colomn is an intiger
+                            # checks that ID column is an integer
 
                             if int(row['ID']) not in id_check:
                                 
-                                # adds one to succsess to keep track of valid rows
+                                # adds one to success to keep track of valid rows
                             
-                                succsess = succsess + 1                                
+                                success += 1                                
                                 
                             elif str(row['name']).strip() in name_check:
                                     
@@ -99,9 +99,9 @@ def validate(filepath, data):
 
                                 omit_rows.append(index)
                                 
-                                # adds one to succsess to keep track of valid rows
+                                # adds one to success to keep track of valid rows
                             
-                                succsess += 1     
+                                success += 1     
                                     
                             else:
 
@@ -109,7 +109,7 @@ def validate(filepath, data):
 
                         except:
 
-                            # if it is not an intiger sets check to four to set the error
+                            # if it is not an integer sets check to four to set the error
 
                             check = 4
 
@@ -124,16 +124,16 @@ def validate(filepath, data):
                 else:
 
                     # if is missing, or is missing @, or missing 
-                    # .com, or is les than 9 charicters long
-                    # sets check to 3 to set up for error mesage
+                    # .com, or is less than 9 characters long
+                    # sets check to 3 to set up for error message
 
                     check = 3 
 
             else:
                 
-                # if is missing or is less than 3 charicters  
+                # if is missing or is less than 3 characters  
                 # long or has digit or missing a space
-                # sets check to 2 to set up for error mesage       
+                # sets check to 2 to set up for error message          
 
                 check = 2                            
 
@@ -167,8 +167,6 @@ def validate(filepath, data):
                 
             # resets check variable
                 
-                
-
         # uses check to see what part of line failed to insert into
             
         if check == 1 or check == 4:
@@ -199,12 +197,12 @@ def validate(filepath, data):
 
             log = log + f'{time.strftime("%I:%M:%S %p")}: row {index} ' \
                         f'fail on department check, pleas check that ' \
-                        f'feild contains vaild department\n'
+                        f'field contains valid department\n'
 
 
-    # prints pass fail mesage to terminal
+    # prints pass fail message to terminal
 
-    print(f"{succsess} rows prossessed sucseffully")
+    print(f"{success} rows processed successfully")
     if fail >= 1:
         print(f'{fail} rows failed,')
         print(f'check operations log for more detail')
@@ -219,12 +217,12 @@ def validate(filepath, data):
 
     log = log + '--------------------------------------------\n'
     log = log + f'{time.strftime("%I:%M:%S %p")}\n'
-    log = log + f'{succsess} rows prossessed sucseffully\n'
+    log = log + f'{success} rows processed successfully\n'
     log = log + f'{fail} rows failed\n'
     log = log + '--------------------------------------------\n'
     
-    
-    database.commit()
+    # closes db
+
     database.close()
     
     # returns clean
