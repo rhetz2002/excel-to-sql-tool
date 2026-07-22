@@ -1,6 +1,6 @@
 # Excel to SQL converter
 
----
+tool to convert and insert excel into sql databases
 
 ## requirements 
 
