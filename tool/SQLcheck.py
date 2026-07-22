@@ -17,7 +17,7 @@ def SQL_check(filepath):
     # the loop will continue, will end when var is set to true
     # indicating sql file is present
 
-    while (db_open is False):
+    while db_open is False:
         
         # tries to open file in file path
         

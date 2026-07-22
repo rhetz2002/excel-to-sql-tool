@@ -10,8 +10,20 @@ Removed log_output as it is redundant. I also added the tool subfolder and the l
 
 section 5 secondary libraries                                   
 
-Removed logging as it is redundant, may add another library to use to check if a file present                                   
-                             
+Removed logging as it is redundant, may add another library to use to check if a file present           
+
+## Phase 2 changes (Week 8)
+
+modified the coding structure in section 3. 
+
+added the process of appending data corisponding to an exsisting ID
+
+also moved where the db is oppend
+
+section 4 folder structure 
+
+added SQLcheck.py
+
 ## SECTION 1, Program Overview                   
 Overview of the tool’s processes                       
 ---                  
@@ -108,6 +120,7 @@ sales real
 SECTION 3 pseudo code                                 
 
 > Updated — Week 6: [restructred validation logic and repormpting user process, no longer quits after a single bad row]
+> Updated — Week 8: [moved db opening proccess, added id appending proccess]
 
 rundown of the process of the tool                       
                                                  
@@ -131,6 +144,36 @@ except
         read_Excell(input/filename.xlsx)
     
     placeholder_for_data = []
+
+----------------------------------------------------(updated)----------------------------------------------------
+    while db is unoppened
+
+        try 
+            
+            open db
+
+            for rows and columns in file
+
+                insert row into db
+        
+
+        except
+
+            while unoppened 
+
+                if
+
+                    prompt user if they want to create a new db
+                    
+                        create db
+
+                            
+
+                else
+
+                    prompt user to input file
+-----------------------------------------------------------------------------------------------------------------
+
 ----------------------------------------------------(updated)----------------------------------------------------
     for rows and columns in file
 
@@ -142,41 +185,25 @@ except
                         if (email is valid)
                             if (sales is valid)
                                 if (department is valid)
-                                    add data to placeholder_for_data
+-----------------------------------------------------------------------------------------------------------------
+----------------------------------------------------(updated)----------------------------------------------------
+                                    if (ID is Duplicate)
+                                        if (name matches name paird with ID in db)
+                                            append data to db 
+                                        else
+                                            store row and index for error log and removal
+-----------------------------------------------------------------------------------------------------------------
+                                    else 
+                                        add data to placeholder_for_data
             
             except
                 
-                store row and index for error log
------------------------------------------------------------------------------------------------------------------
-    while db is unoppened
+                store row and index for error log and removal
+    
+    for rows and columns in file
 
-        try 
-            
-            open db
+        insert row into db
 
-            for rows and columns in file
-
-                insert row into db
-        
-----------------------------------------------------(updated)----------------------------------------------------
-        except
-
-            while unoppened 
-
-                if
-
-                    prompt user if they want to create a new db
-                    
-                        create db
-
-                            for rows and columns in file
-
-                                insert row into db
-
-                else
-
-                    prompt user to input file
------------------------------------------------------------------------------------------------------------------
     Close (SQLite file)
 
     print output log to terminal
@@ -194,11 +221,14 @@ overall folder structure
 
 > Updated — Week 6: [removed log output, added tool and log folders, moved program files into tool folder]
 
+> Updated — Week 6: [added SQLcheck.py]
+
 Excel-To-SQL-Tool             
 ├── tool/                  
 │    ├── main.py             
 │    ├── validation.py                  
-│    ├── SQL_output.py                                  
+│    ├── SQLoutput.py    
+│    ├── SQLcheck.py                              
 │    ├── excell_open.py              
 │    ├── output/                   
 │    │    └── output.db                

@@ -37,6 +37,7 @@ data_log += log
 
 # passes args.output trough SQL_check in order to check that the output 
 # location is valid, returns args.output as output variable in case it changes
+# also returns log data in log variable
 
 log, output = SQL_check(args.output)
 
