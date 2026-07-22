@@ -2,7 +2,7 @@
 
 tool to convert and insert excel into sql databases
 
-this tool solves the issue of having to manually type out excel data into an SQL format. all that is needed is to type in a single terminal command with a cuple arguments.
+this tool solves the issue of having to manually type out excel data into an SQL format. all that is needed is to type in a single terminal command with a couple arguments.
 
 ## instillation 
 
@@ -74,35 +74,36 @@ if it executes successfully, you will see a breakdown of lines successfully adde
 
 and the lines that failed with the line "success" all printed in the terminal 
 
-a sucsessfull run will output the following to the terminal
+a successful run will output the following to the terminal
+this run shows the amount of rows that were successfully processed and which ones failed
 
 ```text 
 rows processed
 --------------------------------------------
-row 0 sucsess
-row 1 sucsess
+row 0 success
+row 1 success
 row 2 fail
 row 3 fail
 row 4 fail
 row 5 fail
 row 6 fail
-row 7 sucsess
+row 7 success
 row 8 fail
-row 9 sucsess
-row 10 sucsess
-row 11 sucsess
+row 9 success
+row 10 success
+row 11 success
 row 12 fail
 row 13 fail
-row 14 sucsess
-row 15 sucsess
-row 16 sucsess
-row 17 sucsess
-row 18 sucsess
-row 19 sucsess
-row 20 sucsess
-row 21 sucsess
-row 22 sucsess
-row 23 sucsess
+row 14 success
+row 15 success
+row 16 success
+row 17 success
+row 18 success
+row 19 success
+row 20 success
+row 21 success
+row 22 success
+row 23 success
 16 rows processed successfully
 8 rows failed,
 check operations log for more detail
@@ -117,4 +118,20 @@ the data expected in the input is the following
 
 | ID | name  | email | department | sales|
 |----|-------|-------|------------|------|
-|employee ID (unuiqe whole number)| employee name (first and last name, plain text)| employee email (include .com and @)| department (including either salse or customer service) | sales made (number with two decimal places)|
+|employee ID (unique whole number)| employee name (first and last name, plain text)| employee email (include .com and @)| department (including either sales or customer service) | sales made (number with two decimal places)|
+
+## known bugs 
+
+- if the data input includes two of the same ids it causes a crash as ids are expected to be unique 
+
+- for the time being the terminal needs to be in the same folder as the program or the log dose not get appended with the operation data
+
+## tools used 
+
+- code -OSS (vs code)
+
+- python3
+
+- pandas
+
+- sqlite3

@@ -169,9 +169,9 @@ def validate(filepath, data):
         if check == 0:
 
             # if no errors
-            # adds one to sucsess to keep track of number good lines
+            # adds one to success to keep track of number good lines
 
-            print(f"row {index} sucsess")
+            print(f"row {index} success")
 
         else:
 
