@@ -14,7 +14,7 @@ def process(file_path, data):
 
     data_store = []
 
-    # opens db file from user input given in main 
+    # opens db file from user input given in main
 
     database = sq.connect(f"file:{file_path}?mode=rw", uri=True)
 
@@ -40,16 +40,30 @@ def process(file_path, data):
 
         db.execute("""
                     INSERT INTO employee_sales
-                    (employee_ID, employee_name, employee_email, department, sales)
-                    VALUES (?, ?, ?, ?, ?)""",
-                    (int(data_store[0]), data_store[1], data_store[2], data_store[3], data_store[4]))
+                    (
+                        employee_ID,
+                        employee_name,
+                        employee_email,
+                        department,
+                        sales
+                    )
+                    VALUES (?, ?, ?, ?, ?)
+                    """,
+                   (
+                           int(data_store[0]),
+                           data_store[1],
+                           data_store[2],
+                           data_store[3],
+                           data_store[4]
+                        )
+                   )
 
         # resets data_store to ready for next loop
 
         data_store = []
 
     log = log + f'{time.strftime("%I:%M:%S %p")}: successfully ' \
-                f'inserted data from .xlsx to {file_path}\n' 
+                f'inserted data from .xlsx to {file_path}\n'
 
     # commits and closes database
 
