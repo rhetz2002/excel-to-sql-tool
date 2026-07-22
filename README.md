@@ -109,5 +109,12 @@ check operations log for more detail
 --------------------------------------------
 success
 ```
-
 finally it will output a running operations log in the log folder next to the program
+
+## expected data format 
+
+the data expected in the input is the following
+
+| ID | name  | email | department | sales|
+|----|-------|-------|------------|------|
+|employee ID (unuiqe whole number)| employee name (first and last name, plain text)| employee email (include .com and @)| department (including either salse or customer service) | sales made (number with two decimal places|
