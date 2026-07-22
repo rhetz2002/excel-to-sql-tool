@@ -117,4 +117,4 @@ the data expected in the input is the following
 
 | ID | name  | email | department | sales|
 |----|-------|-------|------------|------|
-|employee ID (unuiqe whole number)| employee name (first and last name, plain text)| employee email (include .com and @)| department (including either salse or customer service) | sales made (number with two decimal places|
+|employee ID (unuiqe whole number)| employee name (first and last name, plain text)| employee email (include .com and @)| department (including either salse or customer service) | sales made (number with two decimal places)|
