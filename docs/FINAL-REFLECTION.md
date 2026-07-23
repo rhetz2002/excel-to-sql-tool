@@ -1,5 +1,5 @@
-- **QUESTION 1**
-I think the thing that the most significant thing i "lerned" during this course was being able to practice my problem solving skills. i put quotes around it because i feel its not something that you can fully be tought and is something that you practice and learn allong the way. another thing im going to take with me going forward is to be more liberall in using try except in my discision structure because it made debugging a nightmare. 
+- **QUESTION 1**                                         
+I think the thing that the most significant thing I "learned" during this course was being able to practice my problem solving skills. I put quotes around it because I feel its not something that you can fully be taught and is something that you practice and learn along the way. You can teach problem solving practices but the bulk of it is critical thinking which is best to be practiced than taught. Another thing I'm going to take with me going forward is to be more Liberal in using try except in my decision structure because it made debugging a nightmare. 
 
 i think the most significant thing i built was the log output portion of main. because i didnt know how i was going to always output the log to a single file regardless of terminal location but im verry happy about the idea of using the main.py file as a landmark of sorts and using pathlib to get main.py's location. it still dosnt quite work as expected if the temrinal is outside of the tool folder but i think the idea still has merrit.
 
@@ -41,12 +41,10 @@ i know there are other ideas i had but the arent coming to mind as i write this
 
 - **QUESTION 5**
 
-    -
+    - followed a multi month programming project through to completion 
 
-    -
+    - trouble shooted programming faults with teamwork
 
-    -
+    - trouble shooted programming faults with criticall thinking
 
-    -
-
-    -
+    - have experience with the scrum planning process including sprint planning, minimising scope creap, and test planning
