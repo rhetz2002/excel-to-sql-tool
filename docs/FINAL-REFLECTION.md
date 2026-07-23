@@ -11,44 +11,45 @@
     YES, definitely. I feel that this sort of design cycle is now my preferred approach for large projects. I think the main thing where the process helped was when it showed the fact that the re-prompt logic was extremely flawed when I wasn't even testing for it I was very surprised when I found that issue. I really like this approach because of its iterative design approach. Building the bare bones testing what works and building off of that.
 
 - **QUESTION 3**
-
+                    
     - **problem 1**
-    the first major problem was the fact that it crashed if the first reprompt failed as mentioned above. it was actually a fairlly easy fix. there was a second bit of code in the excel_open file which was probably a hold over from the originall input funcitonality in v1.0. it would fail and drop into a while loop when it failed, this overcomplicated the whole thing and changing it to try to open in the while loop fixed the issue. 
 
-    this improvment matters as one of my goals for this project was to make the tool as user friendly as posible and part of that goal was to walk the user through the proccess and the re-prompts were part of that. and having this feature failling like this goes against the entire point of that goal
+    The first major problem was the fact that it crashed if the first re-prompt failed as mentioned above, it was actually a fairly easy fix. There was a second bit of code in the excel_open file that I removed to fix the issue. It was probably a hold over from the original input functionality in v1.0 where it would prompt the user after main.py is run rather than how it runs now where you insert the files as you type out the command to run the program. it would fail and drop into a while loop after it failed, this over complicated the whole thing and changing it to try to open in the while loop fixed the issue. 
+
+    This improvement matters as one of my goals for this project was to make the tool as user friendly as possible. Part of that goal was to walk the user through the process and the re-prompts were part of that. Having this feature failing like this goes against the entire point of that goal.
 
     - **problem 2**
 
-    the second most inportant improvment has to be the addition of apending data of like IDs, it may of been outside of the scope of the original project but i felt it was important enough to add to the tool, because it makes the tool better at its job rather than it being another feature, this way it can be used to not just add data but keep it up to date, i adressed it by changing the id check step to be last and while its being checked it will see if its present if it is it will check to see if the name matches to any in the database, if so it appends the entry in the databse if not it skips it.
+    The second most important improvement has to be the addition of appending data of like IDs. It may of been outside of the scope of the original project but I felt it was important enough to add to the tool, plus I had time as you can see. It makes the tool better at its job rather than it being another feature, this way it can be used to not just add data but keep it up to date. I addressed it by moving the id check step to the last position in the verification chain. While its being checked it will see if its present, if it is it will check to see if the name matches to any in the database, if so it appends the entry in the database if not it skips it.
 
-    again i feel this was important because its important to not just add data but also keep it up to date.
+    Again I feel this was important because its important to not just add data but also keep it up to date.
 
     - **problem 3**
 
-    the last problem i can think of would have to be tightening data varification and this one was tricky because what counts as "done" when you talk about somehting like this, and i just ended up saying list off all the things that come to mind when thinking aobut what shouldnt be in the feilds so i ended up checking for thos things and when i implemented those checks that was done.
+    The last problem i can think of would have to be tightening data verification. This one was tricky because what counts as "done" when you talk about something like this. I just ended up listing off all the things that come to mind when thinking about what should and shouldn't be in the fields. Then I made the program check for those requirements that was what I considered done in this case.
 
-    i feel its important to have the program do what it reasonably can to keep the data going into the database clean and not just in terms of valid data types like ints floats and the like. if it was a genral puropse program that turns all excel sheats into SQL databases then maby id be a little looser on the data varification
+    I feel its important to have the program do what it reasonably can to keep the data going into the database clean and not just in terms of valid data types like ints floats and the like. If it was a general purpose program that turns all excel docs into SQL databases then maybe I'd be a little looser on the data verification.
 
 - **QUESTION 4**
 
-if i had more time id defenitly try my hand at making a modified verson for more genrall use one that detects headers and cunstructs the SQL schema based on that but thats a more personall project kind of thing, good for a resume too 
+    If I had more time I'd definitely try my hand at making a modified version for more general use. One that detects headers and constructs the SQL schema based on that, but that's a more personal project kind of thing. I think it'd be a good portfolio item too. 
 
-but in terms of this tool in particular id say i noticed (and put in limitations as well) that it dosnt handle duplicate IDs in the same excel sheet well and hard crashes
+    But in terms of this tool in particular id say i noticed (and put in limitations as well) that it doesn't handle duplicate IDs in the same excel sheet well and hard crashes.
 
-i also noted that my solution for wiritng the log no mater where the terminal is oppend disnt quite work as expected so id also fix that 
+    I also noted that my solution for writing the log no mater where the terminal is opened doesn't quite work as expected so I'd also fix that. 
 
-id also try to loosen the dependency i curently have on try in terms of my desicion structer a bit
+    I'd also try to loosen the dependency I currently have on try in terms of my decision structure a bit.
 
-i know there are other ideas i had but the arent coming to mind as i write this
+    I know there are other ideas I had but the aren't coming to mind as I write this.
 
 - **QUESTION 5**
 
-    - followed a multi month programming project through to completion 
+    - Followed a multi month programming project through to completion.  
 
-    - trouble shooted programming faults with teamwork
+    - Troubleshooted programming faults with teamwork.
 
-    - trouble shooted programming faults with criticall thinking
+    - troubleshooted programming faults independently with critical thinking.
 
-    - have experience with the scrum planning process including sprint planning, minimising scope creap, and test planning
+    - Have experience with the scrum planning process including sprint planning, minimising scope creep, and test planning.
 
     side note this programming project has somewhat given me the want to experiment more so I'm thinking of trying to learn C# next so i can experiment in the unity engine
