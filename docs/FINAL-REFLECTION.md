@@ -1,0 +1,52 @@
+- **QUESTION 1**
+I think the thing that the most significant thing i "lerned" during this course was being able to practice my problem solving skills. i put quotes around it because i feel its not something that you can fully be tought and is something that you practice and learn allong the way. another thing im going to take with me going forward is to be more liberall in using try except in my discision structure because it made debugging a nightmare. 
+
+i think the most significant thing i built was the log output portion of main. because i didnt know how i was going to always output the log to a single file regardless of terminal location but im verry happy about the idea of using the main.py file as a landmark of sorts and using pathlib to get main.py's location. it still dosnt quite work as expected if the temrinal is outside of the tool folder but i think the idea still has merrit.
+
+i think just allot of function usage and sending and reciving variables through them was a bit confusing from the last course i took in python but having a more hands on experince with them a sort of real world senerio in python cleared up allot among other things 
+
+- **QUESTION 2**
+YES, definetly. i feel that this sort of design cycle is now my preferd aproch for large projects. i think the main thing where the proccess helped whas when it showed the fact that the reprompt logic was severilly flawed when i wasnt even testing for it i was verry supprised when i found that issue.
+
+- **QUESTION 3**
+
+    - **problem 1**
+    the first major problem was the fact that it crashed if the first reprompt failed as mentioned above. it was actually a fairlly easy fix. there was a second bit of code in the excel_open file which was probably a hold over from the originall input funcitonality in v1.0. it would fail and drop into a while loop when it failed, this overcomplicated the whole thing and changing it to try to open in the while loop fixed the issue. 
+
+    this improvment matters as one of my goals for this project was to make the tool as user friendly as posible and part of that goal was to walk the user through the proccess and the re-prompts were part of that. and having this feature failling like this goes against the entire point of that goal
+
+    - **problem 2**
+
+    the second most inportant improvment has to be the addition of apending data of like IDs, it may of been outside of the scope of the original project but i felt it was important enough to add to the tool, because it makes the tool better at its job rather than it being another feature, this way it can be used to not just add data but keep it up to date, i adressed it by changing the id check step to be last and while its being checked it will see if its present if it is it will check to see if the name matches to any in the database, if so it appends the entry in the databse if not it skips it.
+
+    again i feel this was important because its important to not just add data but also keep it up to date.
+
+    - **problem 3**
+
+    the last problem i can think of would have to be tightening data varification and this one was tricky because what counts as "done" when you talk about somehting like this, and i just ended up saying list off all the things that come to mind when thinking aobut what shouldnt be in the feilds so i ended up checking for thos things and when i implemented those checks that was done.
+
+    i feel its important to have the program do what it reasonably can to keep the data going into the database clean and not just in terms of valid data types like ints floats and the like. if it was a genral puropse program that turns all excel sheats into SQL databases then maby id be a little looser on the data varification
+
+- **QUESTION 4**
+
+if i had more time id defenitly try my hand at making a modified verson for more genrall use one that detects headers and cunstructs the SQL schema based on that but thats a more personall project kind of thing, good for a resume too 
+
+but in terms of this tool in particular id say i noticed (and put in limitations as well) that it dosnt handle duplicate IDs in the same excel sheet well and hard crashes
+
+i also noted that my solution for wiritng the log no mater where the terminal is oppend disnt quite work as expected so id also fix that 
+
+id also try to loosen the dependency i curently have on try in terms of my desicion structer a bit
+
+i know there are other ideas i had but the arent coming to mind as i write this
+
+- **QUESTION 5**
+
+    -
+
+    -
+
+    -
+
+    -
+
+    -
