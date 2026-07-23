@@ -2,9 +2,9 @@
 
     I think the thing that the most significant thing I "learned" during this course was being able to practice my problem solving skills. I put quotes around it because I feel its not something that you can fully be taught and is something that you practice and learn along the way. You can teach problem solving practices but the bulk of it is critical thinking which is best to be practiced than taught. Another thing I'm going to take with me going forward is to be more Liberal in using try except in my decision structure because it made debugging a nightmare. 
 
-i think the most significant thing i built was the log output portion of main. because i didnt know how i was going to always output the log to a single file regardless of terminal location but im verry happy about the idea of using the main.py file as a landmark of sorts and using pathlib to get main.py's location. it still dosnt quite work as expected if the temrinal is outside of the tool folder but i think the idea still has merrit.
+    i think the most significant thing i built was the log output portion of main. because i didnt know how i was going to always output the log to a single file regardless of terminal location but im verry happy about the idea of using the main.py file as a landmark of sorts and using pathlib to get main.py's location. it still dosnt quite work as expected if the temrinal is outside of the tool folder but i think the idea still has merrit.
 
-i think just allot of function usage and sending and reciving variables through them was a bit confusing from the last course i took in python but having a more hands on experince with them a sort of real world senerio in python cleared up allot among other things 
+    i think just allot of function usage and sending and reciving variables through them was a bit confusing from the last course i took in python but having a more hands on experince with them a sort of real world senerio in python cleared up allot among other things 
 
 - **QUESTION 2**
 YES, definetly. i feel that this sort of design cycle is now my preferd aproch for large projects. i think the main thing where the proccess helped whas when it showed the fact that the reprompt logic was severilly flawed when i wasnt even testing for it i was verry supprised when i found that issue.
