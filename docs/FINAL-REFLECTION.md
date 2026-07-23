@@ -46,7 +46,7 @@
 
     - Followed a multi month programming project through to completion.  
 
-    - Troubleshooted programming faults with teamwork.
+    - Troubleshooted programming faults with teamwork. 
 
     - troubleshooted programming faults independently with critical thinking.
 
