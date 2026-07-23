@@ -7,7 +7,8 @@
     I think just allot of function usage and sending and receiving variables through them was a bit confusing from the last course I took in python. But having more hands on experience with them in a sort of real world scenario in python cleared up allot about how they work among other things. 
 
 - **QUESTION 2**
-YES, definetly. i feel that this sort of design cycle is now my preferd aproch for large projects. i think the main thing where the proccess helped whas when it showed the fact that the reprompt logic was severilly flawed when i wasnt even testing for it i was verry supprised when i found that issue.
+    
+    YES, definitely. I feel that this sort of design cycle is now my preferred approach for large projects. I think the main thing where the process helped was when it showed the fact that the re-prompt logic was extremely flawed when I wasn't even testing for it I was very surprised when I found that issue. I really like this approach because of its iterative design approach. Building the bare bones testing what works and building off of that.
 
 - **QUESTION 3**
 
@@ -49,3 +50,5 @@ i know there are other ideas i had but the arent coming to mind as i write this
     - trouble shooted programming faults with criticall thinking
 
     - have experience with the scrum planning process including sprint planning, minimising scope creap, and test planning
+
+    side note this programming project has somewhat given me the want to experiment more so I'm thinking of trying to learn C# next so i can experiment in the unity engine
